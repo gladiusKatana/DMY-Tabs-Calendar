@@ -21,7 +21,7 @@ class CollectionVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {return downcastLayout!.rows}
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {return downcastLayout!.rows}
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {return downcastLayout!.cols}
     
     override func viewDidLoad() {
         collectionView.backgroundColor = navyBlue

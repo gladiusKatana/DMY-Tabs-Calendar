@@ -47,11 +47,10 @@ class CollectionVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.reuseIdentifier, for: indexPath) as! CustomCell
-        
         cell.titleLabel.text = "\(indexPath.section),\(indexPath.row)"
         
         setCellColours(cell: cell, indexPath: indexPath)
-        
+        setCellText(cell: cell, indexPath: indexPath)
 //        print(indexPath)
         
         return cell

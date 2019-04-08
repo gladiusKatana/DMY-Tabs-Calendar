@@ -31,6 +31,7 @@
 		06349B10225ACE0000FBFE88 /* CellColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFF225ACE0000FBFE88 /* CellColours.swift */; };
 		06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B00225ACE0000FBFE88 /* SetTopVC.swift */; };
 		06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B01225ACE0000FBFE88 /* CollectionVC.swift */; };
+		06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B13225AFBAF00FBFE88 /* CellText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		06349AFF225ACE0000FBFE88 /* CellColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellColours.swift; sourceTree = "<group>"; };
 		06349B00225ACE0000FBFE88 /* SetTopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTopVC.swift; sourceTree = "<group>"; };
 		06349B01225ACE0000FBFE88 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		06349B13225AFBAF00FBFE88 /* CellText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +131,12 @@
 		06349AEF225ACE0000FBFE88 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				06349AF0225ACE0000FBFE88 /* Colours.swift */,
-				06349AF1225ACE0000FBFE88 /* Attributes.swift */,
-				06349AF2225ACE0000FBFE88 /* ZIndex.swift */,
-				06349AF3225ACE0000FBFE88 /* CellSizingModes.swift */,
 				06349AF4225ACE0000FBFE88 /* Layout.swift */,
 				06349AF5225ACE0000FBFE88 /* Prepare.swift */,
+				06349AF3225ACE0000FBFE88 /* CellSizingModes.swift */,
+				06349AF1225ACE0000FBFE88 /* Attributes.swift */,
+				06349AF2225ACE0000FBFE88 /* ZIndex.swift */,
+				06349AF0225ACE0000FBFE88 /* Colours.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,8 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */,
-				06349AFC225ACE0000FBFE88 /* Present&Reload.swift */,
 				06349AFD225ACE0000FBFE88 /* Reload.swift */,
+				06349AFC225ACE0000FBFE88 /* Present&Reload.swift */,
 			);
 			path = "Controller(Navigation)";
 			sourceTree = "<group>";
@@ -162,9 +164,10 @@
 		06349AFE225ACE0000FBFE88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
-				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
+				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
+				06349B13225AFBAF00FBFE88 /* CellText.swift */,
+				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06349B0C225ACE0000FBFE88 /* DeviceTypeCheck.swift in Sources */,
+				06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */,
 				06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */,
 				06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */,
 				06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */,

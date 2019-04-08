@@ -8,8 +8,6 @@ extension CollectionVC {
     
     func setCellColours (cell: CustomCell, indexPath: IndexPath) {
         
-        cell.titleLabel.textColor = .white //platinumMedium
-        
         let row = indexPath.row; let column = indexPath.section
         
         let customLayout = downcastLayout!

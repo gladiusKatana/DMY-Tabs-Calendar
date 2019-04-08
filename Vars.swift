@@ -14,7 +14,7 @@ var testNum = 24                // only for testing, in the below vars
 
 
 
-var vcLayoutOne = CCVFlowLayout(rows: 5, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1, //note, if loadsHorizontal is true, 'rows' look like columns
+var vcLayoutOne = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1, //note, if loadsHorizontal is true, 'rows' look like columns
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
                                 loadsHorizontal: true,
                                 squareCellMode: .autoSquareHeightFromWidth)

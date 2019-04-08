@@ -8,7 +8,7 @@ extension CollectionVC {
     
     func setCellColours (cell: CustomCell, indexPath: IndexPath) {
         
-        let row = indexPath.row; let column = indexPath.section
+        let row = indexPath.item; let column = indexPath.section
         
         let customLayout = downcastLayout!
         

@@ -8,7 +8,7 @@ extension CollectionVC {
     
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
 
-        let column = indexPath.row ; let row = indexPath.section
+        let column = indexPath.item ; let row = indexPath.section // since  loadsHorizontal  should be  true  for a (typical) calendar
         
 //        let customLayout = downcastLayout!
         

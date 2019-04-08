@@ -8,7 +8,7 @@ extension CollectionVC {
     
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
 
-        let row = indexPath.row ; let column = indexPath.section
+        let column = indexPath.row ; let row = indexPath.section
         
 //        let customLayout = downcastLayout!
         
@@ -16,11 +16,11 @@ extension CollectionVC {
         
         let days = ["S", "M", "T", "W", "T", "F", "S"]
         
-        if column == 0 {//< customLayout.lockedHeaderSections {
-            cell.titleLabel.text = days[row]
+        if row == 0 {//< customLayout.lockedHeaderSections {
+            cell.titleLabel.text = days[column]
         }
 //        else {
-//
+//            cell.titleLabel.text = "\(column)"
 //        }
     }
 }

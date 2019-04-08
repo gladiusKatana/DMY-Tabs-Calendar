@@ -9,13 +9,13 @@ extension CCVFlowLayout {
     func determineZIndex(item: Int, section: Int, cellAttributes: UICollectionViewLayoutAttributes) {    // Determine zIndex based on cell type.
         //var zIndexPrintable: Int = Int()
         
-        if section < lockedLeftHeaders && item < lockedTopHeaders {  //Determine zIndex based on cell type.
+        if section < lockedHeaderSections && item < lockedHeaderRows {  //Determine zIndex based on cell type.
             cellAttributes.zIndex = 4
         }
-        else if item < lockedTopHeaders {
+        else if item < lockedHeaderRows {
             cellAttributes.zIndex = 3
         }
-        else if section < lockedLeftHeaders {
+        else if section < lockedHeaderSections {
             cellAttributes.zIndex = 2
         }
         else {

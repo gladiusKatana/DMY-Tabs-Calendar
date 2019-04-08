@@ -36,13 +36,13 @@ extension CCVFlowLayout {
                 
                 var xO = CGFloat(0);    var yO = CGFloat(0)                                                     //; print("*", terminator: "")
                 
-                if i < lockedTopHeaders && j < lockedLeftHeaders {
+                if i < lockedHeaderRows && j < lockedHeaderSections {
                     xO = xOffSet + CGFloat(j) * widthPlusSpace;     yO = yOffSet + CGFloat(i) * heightPlusSpace
                 }
-                else if i < lockedTopHeaders {
+                else if i < lockedHeaderRows {
                     xO = xDefault;                                  yO = yOffSet + CGFloat(i) * heightPlusSpace
                 }
-                else if j < lockedLeftHeaders {
+                else if j < lockedHeaderSections {
                     xO = xOffSet + CGFloat(j) * widthPlusSpace;     yO = yDefault
                 }
                 else {

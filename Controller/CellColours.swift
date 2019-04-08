@@ -14,7 +14,7 @@ extension CollectionVC {
         
         let customLayout = downcastLayout!
         
-        if row < customLayout.lockedTopHeaders || column < customLayout.lockedLeftHeaders {
+        if row < customLayout.lockedHeaderRows || column < customLayout.lockedHeaderSections {
             cell.backgroundColor = headerColour
         }
         else {

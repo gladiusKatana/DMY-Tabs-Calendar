@@ -11,17 +11,17 @@ class CCVFlowLayout : UICollectionViewFlowLayout {// stands for "Custom Collecti
     var xDefault = CGFloat(0);              var yDefault = CGFloat(0);      var widthPlusSpace = CGFloat(0);        var heightPlusSpace = CGFloat(0)
     var contentSize = CGSize.zero
     
-    var cols = 0;                           var rows = 0;                   var lockedTopHeaders = 0;               var lockedLeftHeaders = 0
+    var cols = 0;                           var rows = 0;                   var lockedHeaderRows = 0;               var lockedHeaderSections = 0
     var majorElements = 0;                  var minorElements = 0
     
     var loadsHorizontal = false;            var cellDimensionsMode = CellDimensionsMode.neitherHardcoded
     var squareCells = false;                var squareCellMode = SquareCellMode.noAutoSquare
     
-    init(rows: Int, cols: Int, lockedTopHeaders: Int, lockedLeftHeaders: Int, cellWidth: CGFloat?, cellHeight: CGFloat?, hSpace: CGFloat, vSpace: CGFloat, loadsHorizontal: Bool, squareCellMode: SquareCellMode) {
+    init(rows: Int, cols: Int, lockedHeaderRows: Int, lockedHeaderSections: Int, cellWidth: CGFloat?, cellHeight: CGFloat?, hSpace: CGFloat, vSpace: CGFloat, loadsHorizontal: Bool, squareCellMode: SquareCellMode) {
         
         self.hSpace = hSpace;                       self.vSpace = vSpace
         self.rows = rows;                           self.cols = cols
-        self.lockedTopHeaders = lockedTopHeaders;   self.lockedLeftHeaders = lockedLeftHeaders
+        self.lockedHeaderRows = lockedHeaderRows;   self.lockedHeaderSections = lockedHeaderSections
         self.loadsHorizontal = loadsHorizontal;     self.squareCellMode = squareCellMode
         super.init()
         

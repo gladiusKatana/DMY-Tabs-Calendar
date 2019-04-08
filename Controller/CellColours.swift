@@ -18,23 +18,7 @@ extension CollectionVC {
             cell.backgroundColor = headerColour
         }
         else {
-            
-            if customLayout.squareCellMode == .noAutoSquare {
-                if row % 2 != 0 {
-                    cell.backgroundColor = grayTwo
-                }
-                else {
-                    cell.backgroundColor = cellDefaultColour
-                }
-            }
-            else {
-                if row % 2 != 0 || column % 2 != 0 {
-                    cell.backgroundColor = grayTwo
-                }
-                else {
-                    cell.backgroundColor = cellDefaultColour
-                }
-            }
+            cell.backgroundColor = cellDefaultColour
         }
     }
 }

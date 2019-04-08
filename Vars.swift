@@ -14,15 +14,15 @@ var testNum = 24                // only for testing, in the below vars
 
 
 
-var vcLayoutOne = CCVFlowLayout(rows: 7, cols: 5, lockedTopHeaders: 1, lockedLeftHeaders: 1,
+var vcLayoutOne = CCVFlowLayout(rows: 7, cols: 6, lockedTopHeaders: 0, lockedLeftHeaders: 1,
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
-                                loadsHorizontal: false,
-                                squareCellMode: .noAutoSquare)
+                                loadsHorizontal: true,
+                                squareCellMode: .autoSquareHeightFromWidth)
 
-var vcLayoutTwo = CCVFlowLayout(rows: testNum, cols: testNum, lockedTopHeaders: 1, lockedLeftHeaders: 1,
-                                cellWidth: 60, cellHeight: 40, hSpace: cellGap, vSpace: cellGap,
-                                loadsHorizontal: false,
-                                squareCellMode: .noAutoSquare)  // *why no autocomplete for enum cases? need make enum global?
+var vcLayoutTwo = vcLayoutOne//CCVFlowLayout(rows: testNum, cols: testNum, lockedTopHeaders: 1, lockedLeftHeaders: 1,
+//                                cellWidth: 60, cellHeight: 40, hSpace: cellGap, vSpace: cellGap,
+//                                loadsHorizontal: false,
+//                                squareCellMode: .noAutoSquare)  // *why no autocomplete for enum cases? need make enum global?
 
 var viewControllerOne = CollectionVC(headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: vcLayoutOne)
 var viewControllerTwo = CollectionVC(headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: vcLayoutTwo)

@@ -25,6 +25,9 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
+        (weekday, monthStr, dayInt, year) = displayDate(dt: Date())
+        print("launched on \(weekday), \(monthStr) \(dayInt), \(year)\n")
+        
         return true
     }
     

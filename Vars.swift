@@ -51,3 +51,5 @@ var navBarHeight = 0.0;         var launchWidth = 0.0
 
 var rePresentedVCFromButton = false
 var willPresentVCAgainBecauseAppJustEnteredForeground = false
+
+var (weekday, monthStr, dayInt, year) = ("", "", 0, 0)

@@ -13,16 +13,16 @@ extension CCVFlowLayout {
     }
     
     override var collectionViewContentSize: CGSize {                                                            //print("content size = \(contentSize)")
-        let w = CGFloat(majorElements) * widthPlusSpace
-        let h = CGFloat(minorElements) * heightPlusSpace
+        let w = CGFloat(cols) * widthPlusSpace
+        let h = CGFloat(rows) * heightPlusSpace
         return CGSize(width: w, height: h)
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {         //print("layout for elements...")
         var attributesForElements = [UICollectionViewLayoutAttributes]()
         
-        for j in 0 ..< majorElements {
-            for i in 0 ..< minorElements {
+        for j in 0 ..< cols {
+            for i in 0 ..< rows {
                 
                 var ip : IndexPath = IndexPath()
                 

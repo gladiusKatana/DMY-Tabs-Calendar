@@ -1,6 +1,6 @@
  /*  Description.swift
  //  The 'Ultimate' Collection View Boilerplate
- //  Created by Garth Snyder on 2019-02-07.  //  Copyright © 2019 Garth Snyder. All rights reserved.
+ //  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
  
   
                                                                                      < ◉ > __________________

@@ -6,7 +6,7 @@ import UIKit
 
 //extension NSObject {
 
-    func displayDate(dt: Date)
+    func displayDate(_ inputDate: Date)
         -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
     {                                                               //"h:mm" a 'on', dd, yyyy //"MMMM dd" //"MMM d"
 
@@ -15,10 +15,10 @@ import UIKit
         let dayIntFormatter = DateFormatter();                      dayIntFormatter.dateFormat = "d"
         let yearFormatter = DateFormatter();                        yearFormatter.dateFormat = "YYYY"
 
-        let weekday = weekdayFormatter.string(from: dt as Date)//.capitalized
-        let monthStr = monthStrFormatter.string(from: dt as Date)
-        let dayInt = Int(dayIntFormatter.string(from: dt as Date))
-        let year = Int(yearFormatter.string(from: dt as Date))
+        let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
+        let monthStr = monthStrFormatter.string(from: inputDate as Date)
+        let dayInt = Int(dayIntFormatter.string(from: inputDate as Date))
+        let year = Int(yearFormatter.string(from: inputDate as Date))
         
         return (weekday, monthStr, dayInt!, year!)
     }

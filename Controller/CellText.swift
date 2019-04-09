@@ -12,30 +12,25 @@ extension CollectionVC {
 
         cell.titleLabel.textColor = .white
         
-        //let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
         
+        if row == calendarRowThatTodayIsOn && column == calendarColumnThatTodayIsOn {
+            cell.backgroundColor = icyBlue
+            cell.titleLabel.text = "\(dayInt)"
+        }
         
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-//
-//        let convenientInitialStartDate = formatter.date(from: "2019/09/1 12:00")
-//
-//        let secondsIntoTheFuture = 86400 * ((row - 1) * 7 + column)
-//        let cellDate = convenientInitialStartDate! + TimeInterval(secondsIntoTheFuture)
-//
-//        let (_, _, _, _, dateInt, _, _, _, _) = displayDate(dateCreated: cellDate)
-        
-        
+        let daysAhead = 86400 * (column - calendarRowThatTodayIsOn + 7 * (row - calendarColumnThatTodayIsOn))
+        let cellDate = Date() + TimeInterval(daysAhead)
+        (_, _, dayInt, _) = displayDate(cellDate)
 
-        //let customLayout = downcastLayout!
-        if row == 0 {//< customLayout.lockedHeaderSections {
+        
+        if row == 0 {//< downcastLayout!.lockedHeaderSections { // probably won't want more than one locked header section (even more so for rows)
             cell.titleLabel.text = dayLabels[column]
         }
-//        else {
-//            cell.titleLabel.text = "\(dateInt)"
-//        }
+        else {
+            cell.titleLabel.text = "\(dayInt)"
+        }
     }
 }
 

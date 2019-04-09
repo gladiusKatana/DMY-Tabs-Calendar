@@ -25,8 +25,11 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
-        (weekday, monthStr, dayInt, year) = displayDate(dt: Date())
-        print("launched on \(weekday), \(monthStr) \(dayInt), \(year)\n")
+        (weekday, monthStr, dayInt, year) = displayDate(Date())                 ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)\n")
+        calendarRowThatTodayIsOn = dayInt / 7 + 1
+        calendarColumnThatTodayIsOn = days.firstIndex(of: weekday)!
+        
+        print("today is on column \(calendarColumnThatTodayIsOn)")
         
         return true
     }

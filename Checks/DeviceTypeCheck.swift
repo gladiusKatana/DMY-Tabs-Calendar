@@ -1,7 +1,5 @@
 //  DeviceTypeCheck.swift
-//  Extension created by Stack Overflow User HAS (see answer: Nov 16 '14 by HAS):
-//  https://stackoverflow.com/questions/26028918/how-to-determine-the-current-iphone-device-model
-
+//  Extension created by Stack Overflow User HAS (see answer: Nov 16 '14 by HAS): https://stackoverflow.com/questions/26028918/how-to-determine-the-current-iphone-device-model
 //  DMY-Tabs-Calendar
 //  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
 

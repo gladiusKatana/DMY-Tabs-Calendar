@@ -26,10 +26,10 @@ import UIKit
         UINavigationBar.appearance().shadowImage = UIImage()
         
         (weekday, monthStr, dayInt, year) = displayDate(Date())                 ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)\n")
-        calendarRowThatTodayIsOn = dayInt / 7 + 1
-        calendarColumnThatTodayIsOn = days.firstIndex(of: weekday)!
+        todayCalendarCellRow = dayInt / 7 + 1
+        todayCalendarCellColumn = days.firstIndex(of: weekday)!
         
-        print("today is on column \(calendarColumnThatTodayIsOn)")
+        print("today is on column \(todayCalendarCellRow)")
         
         return true
     }

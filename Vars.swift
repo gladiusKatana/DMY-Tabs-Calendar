@@ -48,7 +48,7 @@ var xOffSet = CGFloat(0);           var yOffSet = CGFloat(0)
 
 var (weekday, monthStr, dayInt, year) = ("", "", 0, 0);         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-var calendarRowThatTodayIsOn = 0;   var calendarColumnThatTodayIsOn = 0    //["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+var todayCalendarCellRow = 0;       var todayCalendarCellColumn = 0    //["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 var statusBarHeight = 0.0;          var lastStatusBarHeight = 0.0
 var navBarHeight = 0.0;             var launchWidth = 0.0
 

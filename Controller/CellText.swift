@@ -15,12 +15,12 @@ extension CollectionVC {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
         
-        if row == calendarRowThatTodayIsOn && column == calendarColumnThatTodayIsOn {
+        if row == todayCalendarCellRow && column == todayCalendarCellColumn {
             cell.backgroundColor = icyBlue
             cell.titleLabel.text = "\(dayInt)"
         }
         
-        let daysAhead = 86400 * (column - calendarRowThatTodayIsOn + 7 * (row - calendarColumnThatTodayIsOn))
+        let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
         let cellDate = Date() + TimeInterval(daysAhead)
         (_, _, dayInt, _) = displayDate(cellDate)
 

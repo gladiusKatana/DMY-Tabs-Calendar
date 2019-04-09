@@ -43,8 +43,10 @@ class CollectionVC: UICollectionViewController {
         if rePresentedVCFromButton {
             print(substringWithAppends(input: navBarTitle, preceding: "\nview ", following:  " appeared"))
         }
+        
+        let headerDateString = "\(monthStr) \(year)\n"
 
-        setupViewTitle(titleText: navBarTitle, numLines: 1, alignment: .left)
+        setupViewTitle(titleText: headerDateString, numLines: 1, alignment: .left)
         setupNavBarButtons(graySeven, atIndex: colourIndex)
     }
     

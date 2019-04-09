@@ -7,7 +7,6 @@ import UIKit
 class CollectionVC: UICollectionViewController {
     var navBarTitle: String = String("")
     var colourIndex: Int = Int()
-    
     var downcastLayout : CCVFlowLayout?
     
     init(headerTitle: String, colourIndex: Int, collectionViewLayout layout: UICollectionViewLayout) {

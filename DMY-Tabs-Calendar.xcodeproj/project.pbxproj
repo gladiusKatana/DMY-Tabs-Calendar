@@ -32,6 +32,7 @@
 		06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B00225ACE0000FBFE88 /* SetTopVC.swift */; };
 		06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B01225ACE0000FBFE88 /* CollectionVC.swift */; };
 		06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B13225AFBAF00FBFE88 /* CellText.swift */; };
+		0669AA14225C49C500E2AE8E /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669AA13225C49C500E2AE8E /* Dates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		06349B00225ACE0000FBFE88 /* SetTopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTopVC.swift; sourceTree = "<group>"; };
 		06349B01225ACE0000FBFE88 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		06349B13225AFBAF00FBFE88 /* CellText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellText.swift; sourceTree = "<group>"; };
+		0669AA13225C49C500E2AE8E /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				06349AED225ACE0000FBFE88 /* CustomCell.swift */,
 				06349AEE225ACE0000FBFE88 /* StringMethods.swift */,
+				0669AA13225C49C500E2AE8E /* Dates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				06349AEB225ACDDB00FBFE88 /* Description.swift in Sources */,
 				06349AE6225ACDCF00FBFE88 /* Lifecycle.swift in Sources */,
 				06349B10225ACE0000FBFE88 /* CellColours.swift in Sources */,
+				0669AA14225C49C500E2AE8E /* Dates.swift in Sources */,
 				06349B0F225ACE0000FBFE88 /* Reload.swift in Sources */,
 				06349B02225ACE0000FBFE88 /* CustomCell.swift in Sources */,
 				06349AE5225ACDCF00FBFE88 /* LaunchOrientation.swift in Sources */,

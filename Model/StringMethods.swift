@@ -1,10 +1,9 @@
-//  StringMethods.swift
-//  Extension created by Stack Overflow User NAlexN:
-//  https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language
-//  (See answer: Nov 6 '14 by NAlexN)
+//  DMY-Tabs-Calendar
+//  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
 
-//  The 'Ultimate' Collection View Boilerplate
-//  Created by Garth Snyder on 2019-02-07.  //  Copyright © 2019 Garth Snyder. All rights reserved.
+//  StringMethods.swift
+//  Extension created by Stack Overflow User NAlexN (see answer: Nov 6 '14 by NAlexN):
+//  https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language
 
 import Foundation
 
@@ -36,7 +35,7 @@ extension String {
 }
 
 func substringWithAppends(input: String, preceding: String, following: String) -> String {    // Garth Snyder added this method
-    let str = "\(preceding)\(input.substring(fromIndex: 16))\(following)"             // why 16 characters? to get past the space in, eg, "Collection View 1"
+    let str = "\(preceding)\(input.substring(fromIndex: 16))\(following)" // why 16 characters?  To get past the space in, eg, "Collection View 1"
     return str
 }
 

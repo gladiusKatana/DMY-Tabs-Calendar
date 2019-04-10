@@ -1,6 +1,5 @@
 //  Attributes.swift
-//  DMY-Tabs-Calendar
-//  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
+//  DMY-Tabs-Calendar  ∙  1st commit Apr. 07, 2019  ∙  Created by Garth Snyder a.k.a. gladiusKatana ⚔️
 
 import UIKit
 

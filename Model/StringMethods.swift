@@ -1,7 +1,6 @@
 //  StringMethods.swift
 //  Extension created by Stack Overflow User NAlexN (see answer: Nov 6 '14 by NAlexN):  https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language
-//  DMY-Tabs-Calendar
-//  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
+//  DMY-Tabs-Calendar  ∙  1st commit Apr. 07, 2019  ∙  Created by Garth Snyder a.k.a. gladiusKatana ⚔️
 
 import Foundation
 

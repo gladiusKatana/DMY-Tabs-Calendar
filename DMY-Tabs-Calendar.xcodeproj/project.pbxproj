@@ -24,7 +24,7 @@
 		06349B08225ACE0000FBFE88 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF4225ACE0000FBFE88 /* Layout.swift */; };
 		06349B09225ACE0000FBFE88 /* Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF5225ACE0000FBFE88 /* Prepare.swift */; };
 		06349B0A225ACE0000FBFE88 /* TestSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF7225ACE0000FBFE88 /* TestSquare.swift */; };
-		06349B0C225ACE0000FBFE88 /* DeviceTypeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */; };
+		06349B0C225ACE0000FBFE88 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF9225ACE0000FBFE88 /* DeviceType.swift */; };
 		06349B0D225ACE0000FBFE88 /* NavBarSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */; };
 		06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFC225ACE0000FBFE88 /* Present&Reload.swift */; };
 		06349B0F225ACE0000FBFE88 /* Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFD225ACE0000FBFE88 /* Reload.swift */; };
@@ -55,7 +55,7 @@
 		06349AF4225ACE0000FBFE88 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		06349AF5225ACE0000FBFE88 /* Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prepare.swift; sourceTree = "<group>"; };
 		06349AF7225ACE0000FBFE88 /* TestSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSquare.swift; sourceTree = "<group>"; };
-		06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeCheck.swift; sourceTree = "<group>"; };
+		06349AF9225ACE0000FBFE88 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarSetup.swift; sourceTree = "<group>"; };
 		06349AFC225ACE0000FBFE88 /* Present&Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Present&Reload.swift"; sourceTree = "<group>"; };
 		06349AFD225ACE0000FBFE88 /* Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reload.swift; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				06349AE2225ACDCF00FBFE88 /* Orientation.swift */,
-				06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */,
 				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
+				06349AF9225ACE0000FBFE88 /* DeviceType.swift */,
 			);
 			path = Checks;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06349B0C225ACE0000FBFE88 /* DeviceTypeCheck.swift in Sources */,
+				06349B0C225ACE0000FBFE88 /* DeviceType.swift in Sources */,
 				06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */,
 				06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */,
 				06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */,

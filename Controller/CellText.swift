@@ -14,22 +14,21 @@ extension CollectionVC {
         
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        
         if row == todayCalendarCellRow && column == todayCalendarCellColumn {
             cell.backgroundColor = icyBlue
             cell.titleLabel.text = "\(dayInt)"
         }
         
         let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
-        let cellDate = Date() + TimeInterval(daysAhead)
-        (_, _, dayInt, _) = displayDate(cellDate)
+        let cellDate = currentDate + TimeInterval(daysAhead)
+        let (_, _, dayIntForDisplay, _) = displayDate(cellDate)
 
         
         if row == 0 {//< downcastLayout!.lockedHeaderSections { // probably won't want more than one locked header section (even more so for rows)
             cell.titleLabel.text = dayLabels[column]
         }
         else {
-            cell.titleLabel.text = "\(dayInt)"
+            cell.titleLabel.text = "\(dayIntForDisplay)"
         }
     }
 }

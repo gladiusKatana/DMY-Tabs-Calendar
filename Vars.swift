@@ -13,7 +13,6 @@ var cellGap = CGFloat(0)        // if nonzero, do NOT make this smaller than: 0.
 var testNum = 24                // only for testing, in the below vars
 
 
-
 var vcLayoutOne = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1, //note, if loadsHorizontal is true, 'rows' look like columns
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
                                 loadsHorizontal: true,
@@ -28,14 +27,17 @@ var viewControllerOne = CollectionVC(headerTitle: "Collection View 1", colourInd
 var viewControllerTwo = CollectionVC(headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: vcLayoutTwo)
 
 
-
 var currentTopVC : CollectionVC =
     CollectionVC(headerTitle: "Collection View initial value", colourIndex: 0, collectionViewLayout: vcLayoutOne) // temporary value to satisfy initializer
 var backgroundVC = UIViewController()
 
 
-
 var statusBar = UIView();       var navbarTitleLabel = UILabel();       var testRectanglelayer = CAShapeLayer()
+
+var monthButtonLeft = UIButton();   var monthButtonLeftImage = UIImage()
+var monthButtonRight = UIButton();  var monthButtonRightImage = UIImage()
+
+var currentDate = Date()
 
 var currentOrientation = "orientation (landscape or portrait) for prepare-layout logic"
 var previousOrientation = "previous orientation (landscape or portrait) for prepare-layout logic"
@@ -46,15 +48,14 @@ var phones = ["iPhone4", "iPhone 4s", "iPhone 5", "iPhone 5c", "iPhone 5s", "iPh
 
 var xOffSet = CGFloat(0);           var yOffSet = CGFloat(0)
 
-var (weekday, monthStr, dayInt, year) = ("", "", 0, 0);         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+var (weekday, monthStr, dayInt, year) = ("", "", 0, 0);     var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 var todayCalendarCellRow = 0;       var todayCalendarCellColumn = 0    //["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 var statusBarHeight = 0.0;          var lastStatusBarHeight = 0.0
 var navBarHeight = 0.0;             var launchWidth = 0.0
 
-var rePresentedVCFromButton = false
+var rePresentedVCFromButton = true
 var willPresentVCAgainBecauseAppJustEnteredForeground = false
 
 
-var monthButtonLeft = UIButton();   var monthButtonLeftImage = UIImage()
-var monthButtonRight = UIButton();  var monthButtonRightImage = UIImage()
+

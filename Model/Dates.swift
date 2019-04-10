@@ -4,22 +4,27 @@
 
 import UIKit
 
-//extension NSObject {
 
-    func displayDate(_ inputDate: Date)
-        -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
-    {                                                               //"h:mm" a 'on', dd, yyyy //"MMMM dd" //"MMM d"
+func displayDate(_ inputDate: Date)
+    -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
+{                                                               //"h:mm" a 'on', dd, yyyy //"MMMM dd" //"MMM d"
+    
+    let weekdayFormatter = DateFormatter();                     weekdayFormatter.dateFormat = "EEEE"
+    let monthStrFormatter = DateFormatter();                    monthStrFormatter.dateFormat = "MMMM"
+    let dayIntFormatter = DateFormatter();                      dayIntFormatter.dateFormat = "d"
+    let yearFormatter = DateFormatter();                        yearFormatter.dateFormat = "YYYY"
+    
+    let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
+    let monthStr = monthStrFormatter.string(from: inputDate as Date)
+    let dayInt = Int(dayIntFormatter.string(from: inputDate as Date))
+    let year = Int(yearFormatter.string(from: inputDate as Date))
+    
+    return (weekday, monthStr, dayInt!, year!)
+}
 
-        let weekdayFormatter = DateFormatter();                     weekdayFormatter.dateFormat = "EEEE"
-        let monthStrFormatter = DateFormatter();                    monthStrFormatter.dateFormat = "MMMM"
-        let dayIntFormatter = DateFormatter();                      dayIntFormatter.dateFormat = "d"
-        let yearFormatter = DateFormatter();                        yearFormatter.dateFormat = "YYYY"
 
-        let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
-        let monthStr = monthStrFormatter.string(from: inputDate as Date)
-        let dayInt = Int(dayIntFormatter.string(from: inputDate as Date))
-        let year = Int(yearFormatter.string(from: inputDate as Date))
-        
-        return (weekday, monthStr, dayInt!, year!)
-    }
-//}
+func getDayFrom(date: Date) -> Int {
+    let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "d"
+    let day = Int(dateFormatter.string(from: date))
+    return day!
+}

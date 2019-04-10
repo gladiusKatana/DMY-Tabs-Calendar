@@ -44,8 +44,7 @@ class CollectionVC: UICollectionViewController {
             print(substringWithAppends(input: navBarTitle, preceding: "\nview ", following:  " appeared"))
         }
         
-        let headerDateString = "\(monthStr) \(year)\n"
-        setupViewTitle(titleText: headerDateString, numLines: 1, alignment: .left)
+        setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
         setupNavBarButtons(graySeven, atIndex: colourIndex)
         setupMonthControlButtons()
     }

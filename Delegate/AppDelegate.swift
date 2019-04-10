@@ -25,9 +25,9 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
-        (weekday, monthStr, dayInt, year) = displayDate(Date())                 ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)\n")
+        (weekday, monthStr, dayInt, year) = displayDate(Date())                 ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)")
         todayCalendarCellRow = dayInt / 7 + 1
-        todayCalendarCellColumn = days.firstIndex(of: weekday)!
+        todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
         
         return true
     }

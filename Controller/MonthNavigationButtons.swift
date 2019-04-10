@@ -9,7 +9,7 @@ extension CollectionVC {
     func setupMonthControlButtons() {
         
         let buttonSize = 45;  var buttonYPosition = 450
-        if Double(globalKeyWindow.frame.height) /*== 1024 || viewFrameWidth*/ == 768 {
+        if Double(globalKeyWindow.frame.height) == 768 {
             buttonYPosition = 857//1024 - 167
         }
         
@@ -29,11 +29,32 @@ extension CollectionVC {
         collectionView?.addSubview(monthButtonRight)
     }
     
-    @objc func incrementMonth() {
-        print("incrementing month")
+    @objc func incrementMonth() {                                               //print("incrementing month")
+        var someDayNextMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
+        if dayInt <= 15 {
+            someDayNextMonth = currentDate + TimeInterval(86400 * 35)
+        }
+        else {
+            someDayNextMonth = currentDate + TimeInterval(86400 * 16)
+        }                                                                       //; displayDateForDebugging(someDayNextMonth)
+        
+        let daysBack = getDayFrom(date: someDayNextMonth) - 1                   //; print("days back: \(daysBack)")
+        currentDate = someDayNextMonth - TimeInterval(86400 * daysBack)
+        
+        (weekday, monthStr, dayInt, year) = displayDate(currentDate)            //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
+        todayCalendarCellRow = dayInt / 7 + 1
+        todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+        reloadCollectionView()
+        setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
     }
     
-    @objc func decrementMonth() {
-        print("decrementing month")
-    }//decrementMonth
+    
+    @objc func decrementMonth() {                                    //print("decrementing month")
+        
+    }
+    
+    
+    func displayDateForDebugging(_ inputDate: Date) {
+        let (wkdy, moStr, dayI, yr) = displayDate(inputDate)   ; print("\nsome day next month: \(wkdy), \(moStr) \(dayI), \(yr)")
+    }
 }

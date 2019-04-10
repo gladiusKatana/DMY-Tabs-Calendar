@@ -45,9 +45,9 @@ class CollectionVC: UICollectionViewController {
         }
         
         let headerDateString = "\(monthStr) \(year)\n"
-
         setupViewTitle(titleText: headerDateString, numLines: 1, alignment: .left)
         setupNavBarButtons(graySeven, atIndex: colourIndex)
+        setupMonthControlButtons()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -29,8 +29,6 @@ import UIKit
         todayCalendarCellRow = dayInt / 7 + 1
         todayCalendarCellColumn = days.firstIndex(of: weekday)!
         
-        print("today is on column \(todayCalendarCellRow)")
-        
         return true
     }
     

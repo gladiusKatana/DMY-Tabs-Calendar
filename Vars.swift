@@ -56,4 +56,5 @@ var rePresentedVCFromButton = false
 var willPresentVCAgainBecauseAppJustEnteredForeground = false
 
 
-
+var monthButtonLeft = UIButton();   var monthButtonLeftImage = UIImage()
+var monthButtonRight = UIButton();  var monthButtonRightImage = UIImage()

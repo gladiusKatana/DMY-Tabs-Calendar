@@ -7,6 +7,7 @@ import UIKit
 extension AppDelegate {
     
     func getOrientationAtLaunch() {
+        
         let launchHeight = Double(globalKeyWindow.frame.height) //; print("view frame height \(launchHeight)")
         launchWidth = Double(globalKeyWindow.frame.width)       //;  print("view frame width \(launchWidth)")
         
@@ -25,4 +26,17 @@ extension AppDelegate {
         currentOrientation = launchOrientation; previousOrientation = launchOrientation
         print("launched in \(launchOrientation)")
     }
+}
+
+func checkOrientation() {
+    
+    let currentHeight = Double(globalKeyWindow.frame.height);   let currentWidth = Double(globalKeyWindow.frame.width)
+    
+    if currentHeight > currentWidth {
+        currentOrientation = "portrait"
+    }
+    else if currentHeight < currentWidth {
+        currentOrientation = "landscape"
+    }
+    else {print("\n\nApparently, somehow, the global key window's frame's height & width are being evaluated as equal...")} //shouldn't ever get called
 }

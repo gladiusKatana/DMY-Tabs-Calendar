@@ -10,7 +10,7 @@
 		06112F42225D88CF002579DF /* MonthNavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNavigationButtons.swift */; };
 		06349AD7225ACCBB00FBFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD6225ACCBB00FBFE88 /* Assets.xcassets */; };
 		06349ADA225ACCBB00FBFE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD8225ACCBB00FBFE88 /* LaunchScreen.storyboard */; };
-		06349AE5225ACDCF00FBFE88 /* LaunchOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE2225ACDCF00FBFE88 /* LaunchOrientation.swift */; };
+		06349AE5225ACDCF00FBFE88 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE2225ACDCF00FBFE88 /* Orientation.swift */; };
 		06349AE6225ACDCF00FBFE88 /* Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE3225ACDCF00FBFE88 /* Lifecycle.swift */; };
 		06349AE7225ACDCF00FBFE88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE4225ACDCF00FBFE88 /* AppDelegate.swift */; };
 		06349AEA225ACDDB00FBFE88 /* Vars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE8225ACDDB00FBFE88 /* Vars.swift */; };
@@ -24,7 +24,6 @@
 		06349B08225ACE0000FBFE88 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF4225ACE0000FBFE88 /* Layout.swift */; };
 		06349B09225ACE0000FBFE88 /* Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF5225ACE0000FBFE88 /* Prepare.swift */; };
 		06349B0A225ACE0000FBFE88 /* TestSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF7225ACE0000FBFE88 /* TestSquare.swift */; };
-		06349B0B225ACE0000FBFE88 /* Portrait||Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF8225ACE0000FBFE88 /* Portrait||Landscape.swift */; };
 		06349B0C225ACE0000FBFE88 /* DeviceTypeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */; };
 		06349B0D225ACE0000FBFE88 /* NavBarSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */; };
 		06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFC225ACE0000FBFE88 /* Present&Reload.swift */; };
@@ -42,7 +41,7 @@
 		06349AD6225ACCBB00FBFE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06349AD9225ACCBB00FBFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06349ADB225ACCBB00FBFE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06349AE2225ACDCF00FBFE88 /* LaunchOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchOrientation.swift; sourceTree = "<group>"; };
+		06349AE2225ACDCF00FBFE88 /* Orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orientation.swift; sourceTree = "<group>"; };
 		06349AE3225ACDCF00FBFE88 /* Lifecycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lifecycle.swift; sourceTree = "<group>"; };
 		06349AE4225ACDCF00FBFE88 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06349AE8225ACDDB00FBFE88 /* Vars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vars.swift; sourceTree = "<group>"; };
@@ -56,7 +55,6 @@
 		06349AF4225ACE0000FBFE88 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		06349AF5225ACE0000FBFE88 /* Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prepare.swift; sourceTree = "<group>"; };
 		06349AF7225ACE0000FBFE88 /* TestSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSquare.swift; sourceTree = "<group>"; };
-		06349AF8225ACE0000FBFE88 /* Portrait||Landscape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portrait||Landscape.swift"; sourceTree = "<group>"; };
 		06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTypeCheck.swift; sourceTree = "<group>"; };
 		06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarSetup.swift; sourceTree = "<group>"; };
 		06349AFC225ACE0000FBFE88 /* Present&Reload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Present&Reload.swift"; sourceTree = "<group>"; };
@@ -118,7 +116,7 @@
 			children = (
 				06349AE4225ACDCF00FBFE88 /* AppDelegate.swift */,
 				06349AE3225ACDCF00FBFE88 /* Lifecycle.swift */,
-				06349AE2225ACDCF00FBFE88 /* LaunchOrientation.swift */,
+				06349AE2225ACDCF00FBFE88 /* Orientation.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
-				06349AF8225ACE0000FBFE88 /* Portrait||Landscape.swift */,
 				06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */,
 			);
 			path = Checks;
@@ -258,7 +255,6 @@
 				06112F42225D88CF002579DF /* MonthNavigationButtons.swift in Sources */,
 				06349B03225ACE0000FBFE88 /* StringMethods.swift in Sources */,
 				06349B07225ACE0000FBFE88 /* CellSizingModes.swift in Sources */,
-				06349B0B225ACE0000FBFE88 /* Portrait||Landscape.swift in Sources */,
 				06349AEA225ACDDB00FBFE88 /* Vars.swift in Sources */,
 				06349B08225ACE0000FBFE88 /* Layout.swift in Sources */,
 				06349AEB225ACDDB00FBFE88 /* Description.swift in Sources */,
@@ -267,7 +263,7 @@
 				0669AA14225C49C500E2AE8E /* Dates.swift in Sources */,
 				06349B0F225ACE0000FBFE88 /* Reload.swift in Sources */,
 				06349B02225ACE0000FBFE88 /* CustomCell.swift in Sources */,
-				06349AE5225ACDCF00FBFE88 /* LaunchOrientation.swift in Sources */,
+				06349AE5225ACDCF00FBFE88 /* Orientation.swift in Sources */,
 				06349B0D225ACE0000FBFE88 /* NavBarSetup.swift in Sources */,
 				06349B05225ACE0000FBFE88 /* Attributes.swift in Sources */,
 				06349B09225ACE0000FBFE88 /* Prepare.swift in Sources */,

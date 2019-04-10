@@ -12,7 +12,7 @@ extension CollectionVC {
         }
         else {
             someDayNextMonth = currentDate + TimeInterval(86400 * 16)
-        }                                                                       //; displayDateForDebugging(someDayNextMonth)
+        }                                                                       //; showDateForDebugging(someDayNextMonth)
 
         resetCurrentDateAndReload(someDayNextMonth)
     }
@@ -25,25 +25,29 @@ extension CollectionVC {
         }
         else {
             someDayLastMonth = currentDate - TimeInterval(86400 * 35)
-        }                                                                 //; displayDateForDebugging(someDayLastMonth)
+        }                                                                       //; showDateForDebugging(someDayLastMonth)
         
         resetCurrentDateAndReload(someDayLastMonth)
     }
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
-        let daysSinceTheFirstOfTheMonth = getDayFrom(date: inputDate) - 1
-        currentDate = inputDate - TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
         
-        setCurrentDate()                                                   
+        if getMonthStringFrom(date: inputDate) == getMonthStringFrom(date: Date()) {
+            currentDate = Date()
+        }
+        else {
+            let daysSinceTheFirstOfTheMonth = getDayFrom(date: inputDate) - 1
+            currentDate = inputDate - TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
+        }
+        
+        processCurrentDate()                                                   
         
         setupViewTitle(titleText: "\(monthString) \(year)\n", numLines: 1, alignment: .left)
         reloadCollectionView()
     }
     
-    
-    func displayDateForDebugging(_ inputDate: Date) {
+    /*func showDateForDebugging(_ inputDate: Date) {
         let (wkdy, moStr, dayI, yr) = displayDate(inputDate)   ; print("\nsome day next month: \(wkdy), \(moStr) \(dayI), \(yr)")
-    }
-    
+    }*/
 }

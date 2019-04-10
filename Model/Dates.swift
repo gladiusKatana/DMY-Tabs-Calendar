@@ -3,7 +3,7 @@
 
 import UIKit
 
-func setCurrentDate() {
+func processCurrentDate() {
     (weekday, monthString, dayInt, year) = displayDate(currentDate)
     todayCalendarCellRow = dayInt / 7 + 1
     todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
@@ -31,4 +31,10 @@ func getDayFrom(date: Date) -> Int {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "d"
     let day = Int(dateFormatter.string(from: date))
     return day!
+}
+
+func getMonthStringFrom(date: Date) -> String {
+    let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "MMMM"
+    let nameOfMonth = dateFormatter.string(from: date)
+    return nameOfMonth
 }

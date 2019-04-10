@@ -1,4 +1,4 @@
-//  LaunchOrientation.swift
+//  Orientation.swift
 //  DMY-Tabs-Calendar
 //  Created by Garth Snyder on 2019-02-07.  ⚔️//  Copyright © 2019 Garth Snyder. All rights reserved.
 

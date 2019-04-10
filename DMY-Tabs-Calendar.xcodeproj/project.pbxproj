@@ -116,7 +116,6 @@
 			children = (
 				06349AE4225ACDCF00FBFE88 /* AppDelegate.swift */,
 				06349AE3225ACDCF00FBFE88 /* Lifecycle.swift */,
-				06349AE2225ACDCF00FBFE88 /* Orientation.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -124,9 +123,9 @@
 		06349AEC225ACE0000FBFE88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				06349AED225ACE0000FBFE88 /* CustomCell.swift */,
-				06349AEE225ACE0000FBFE88 /* StringMethods.swift */,
 				0669AA13225C49C500E2AE8E /* Dates.swift */,
+				06349AEE225ACE0000FBFE88 /* StringMethods.swift */,
+				06349AED225ACE0000FBFE88 /* CustomCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,8 +146,9 @@
 		06349AF6225ACE0000FBFE88 /* Checks */ = {
 			isa = PBXGroup;
 			children = (
-				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
+				06349AE2225ACDCF00FBFE88 /* Orientation.swift */,
 				06349AF9225ACE0000FBFE88 /* DeviceTypeCheck.swift */,
+				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
 			);
 			path = Checks;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
-				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06112F41225D88CF002579DF /* MonthNavigationButtons.swift */,
 				06349B13225AFBAF00FBFE88 /* CellText.swift */,
+				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
 			);
 			path = Controller;

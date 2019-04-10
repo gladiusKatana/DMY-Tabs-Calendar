@@ -13,11 +13,13 @@ extension CollectionVC {
         
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        if row == todayCalendarCellRow && column == todayCalendarCellColumn {
+        if getMonthStringFrom(date: currentDate) == getMonthStringFrom(date: Date())
+        && row == todayCalendarCellRow && column == todayCalendarCellColumn
+        {   //currentDate == Date() &&
             cell.backgroundColor = icyBlue
             cell.titleLabel.text = "\(dayInt)"
         }
-        
+    
         let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
         let cellDate = currentDate + TimeInterval(daysAhead)
         let (_, _, dayIntForDisplay, _) = displayDate(cellDate)

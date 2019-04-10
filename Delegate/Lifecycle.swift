@@ -20,8 +20,8 @@ extension AppDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         pryntApplicationStatusWithSpaces(applicationState: "application will enter foreground")
         
-        willPresentVCAgainBecauseAppJustEnteredForeground = true // note, this bool (currently) is one-way: never flips back to false...
-    }//                                                     // ...because calling the above 2 methods causes a layout exception during the whole life cycle
+        willPresentVCAgainBecauseAppJustEnteredForeground = true // note, this bool (currently) is one-way: never flips back to false because...
+    }//                                                          //...calling the above 2 methods causes a layout exception over the whole life cycle
     
     func applicationWillTerminate(_ application: UIApplication) {
         print("terminated")

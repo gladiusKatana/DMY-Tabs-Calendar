@@ -4,7 +4,9 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
+    
     static let reuseIdentifier = "CustomCell"
+    
     lazy var titleLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -19,6 +21,7 @@ class CustomCell: UICollectionViewCell {
         
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal,
                                          toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
+        
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .centerY, relatedBy: .equal,
                                          toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }
@@ -29,7 +32,7 @@ class CustomCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        titleLabel.text = "" //use if title label text is ever set to a non-blank string
+        titleLabel.text = "" // use if title label text is ever set to a non-blank string
     }
 }
 

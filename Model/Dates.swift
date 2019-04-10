@@ -4,7 +4,7 @@
 import UIKit
 
 func setCurrentDate() {
-    (weekday, monthStr, dayInt, year) = displayDate(currentDate)
+    (weekday, monthString, dayInt, year) = displayDate(currentDate)
     todayCalendarCellRow = dayInt / 7 + 1
     todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
 }
@@ -12,12 +12,11 @@ func setCurrentDate() {
 
 func displayDate(_ inputDate: Date)
     -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
-{                                                               //"h:mm" a 'on', dd, yyyy //"MMMM dd" //"MMM d"
-    
-    let weekdayFormatter = DateFormatter();                     weekdayFormatter.dateFormat = "EEEE"
-    let monthStrFormatter = DateFormatter();                    monthStrFormatter.dateFormat = "MMMM"
-    let dayIntFormatter = DateFormatter();                      dayIntFormatter.dateFormat = "d"
-    let yearFormatter = DateFormatter();                        yearFormatter.dateFormat = "YYYY"
+{
+    let weekdayFormatter = DateFormatter();     weekdayFormatter.dateFormat = "EEEE"
+    let monthStrFormatter = DateFormatter();    monthStrFormatter.dateFormat = "MMMM"
+    let dayIntFormatter = DateFormatter();      dayIntFormatter.dateFormat = "d"
+    let yearFormatter = DateFormatter();        yearFormatter.dateFormat = "YYYY"
     
     let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
     let monthStr = monthStrFormatter.string(from: inputDate as Date)

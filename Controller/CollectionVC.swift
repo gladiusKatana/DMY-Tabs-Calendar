@@ -4,9 +4,8 @@
 import UIKit
 
 class CollectionVC: UICollectionViewController {
-    var navBarTitle: String = String("")
-    var colourIndex: Int = Int()
     var downcastLayout : CCVFlowLayout?
+    var navBarTitle: String = String("");   var colourIndex: Int = Int()
     
     init(headerTitle: String, colourIndex: Int, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
@@ -29,21 +28,17 @@ class CollectionVC: UICollectionViewController {
         collectionView.backgroundColor = navyBlue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.reuseIdentifier)
         collectionView.bounces = false
-        
         setupNotificationForStatusBarHeightChange()
-        
         setTopViewController()
         print(substringWithAppends(input: navBarTitle, preceding: "\n💾view ", following:  " loaded"))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setTopViewController()
-        
         if rePresentedVCFromButton {
             print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
         }
-        
-        setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
+        setupViewTitle(titleText: "\(monthString) \(year)\n", numLines: 1, alignment: .left)
         setupNavBarButtons(graySeven, atIndex: colourIndex)
         setupMonthControlButtons()
     }
@@ -55,7 +50,6 @@ class CollectionVC: UICollectionViewController {
         setCellColours(cell: cell, indexPath: indexPath)
         setCellText(cell: cell, indexPath: indexPath)
         //print(indexPath)
-        
         return cell
     }
 }

@@ -6,7 +6,6 @@ import UIKit
 extension CCVFlowLayout {
     
     func determineZIndex(item: Int, section: Int, cellAttributes: UICollectionViewLayoutAttributes) {    // Determine zIndex based on cell type.
-        //var zIndexPrintable: Int = Int()
         
         if section < lockedHeaderSections && item < lockedHeaderRows {  //Determine zIndex based on cell type.
             cellAttributes.zIndex = 4

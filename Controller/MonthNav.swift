@@ -1,4 +1,4 @@
-//  MonthNavigation.swift
+//  MonthNav.swift
 //  DMY-Tabs-Calendar  ∙  1st commit Apr. 07, 2019  ∙  Created by Garth Snyder a.k.a. gladiusKatana ⚔️
 
 import UIKit
@@ -25,19 +25,19 @@ extension CollectionVC {
         }
         else {
             someDayLastMonth = currentDate - TimeInterval(86400 * 35)
-        }                                                                       //; displayDateForDebugging(someDayLastMonth)
+        }                                                                 //; displayDateForDebugging(someDayLastMonth)
         
         resetCurrentDateAndReload(someDayLastMonth)
     }
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
-        let daysSinceTheFirstOfTheMonth = getDayFrom(date: inputDate) - 1 //; print("days back: \(daysSinceTheFirstOfTheMonth)")
+        let daysSinceTheFirstOfTheMonth = getDayFrom(date: inputDate) - 1
         currentDate = inputDate - TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
         
-        setCurrentDate()                                                        //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
+        setCurrentDate()                                                   
         
-        setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
+        setupViewTitle(titleText: "\(monthString) \(year)\n", numLines: 1, alignment: .left)
         reloadCollectionView()
     }
     

@@ -7,7 +7,7 @@ extension UIViewController {
     
     func setTopViewController() {
         
-        if let viewControllers = self.navigationController?.viewControllers { // despite the s, should only ever contain 1 view controller (the 'top' one)
+        if let viewControllers = self.navigationController?.viewControllers {// despite the s, should only contain 1 view controller (the 'top' one)
             
             //print("view controllers: \(viewControllers)")
             

@@ -7,10 +7,10 @@ import UIKit
 func drawTestSquare() { //For testing purposes only: to verify calculation/recalculation of navbar height + status bar height, dynamically.
     testRectanglelayer.path = UIBezierPath(roundedRect: CGRect(x: 0, y: statusBarHeight + navBarHeight, width: 4, height: 4), cornerRadius: 0).cgPath
     
-    let randy = randomNumber(inRange: 1...7) - 1
-    testRectanglelayer.fillColor = randomColours[randy]
-    globalKeyWindow.layer.addSublayer(testRectanglelayer) //vc.view.layer.addSub..
-    //print("drawing rect clr[\(randy)] @ (\(statusBarHeight + navBarHeight)\n")
+    let randNum = randomNumber(inRange: 1...7) - 1
+    testRectanglelayer.fillColor = randomColours[randNum]
+    globalKeyWindow.layer.addSublayer(testRectanglelayer)
+    //print("drawing rect clr[\(randNum)] @ (\(statusBarHeight + navBarHeight)\n")
 }
 
 

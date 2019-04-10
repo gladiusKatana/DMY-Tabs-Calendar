@@ -31,8 +31,8 @@ extension String {
     }
 }
 
-func substringWithAppends(input: String, preceding: String, following: String) -> String {    // Garth Snyder added this method
-    let str = "\(preceding)\(input.substring(fromIndex: 16))\(following)" // why 16 characters?  To get past the space in, eg, "Collection View 1"
+func substringWithAppends(input: String, preceding: String, following: String) -> String { // Garth Snyder added this method
+    let str = "\(preceding)\(input.substring(fromIndex: 16))\(following)" // why 16 characters?  To start past the space in, eg, "Collection View 1"
     return str
 }
 

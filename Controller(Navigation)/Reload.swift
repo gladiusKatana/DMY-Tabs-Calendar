@@ -15,7 +15,7 @@ extension CollectionVC {
     }
     
     
-    @objc func reloadCollectionView() {     //print("↺")
+    @objc func reloadCollectionView() { //print("↺")
         collectionView.reloadData()
     }
     

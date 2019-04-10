@@ -1,4 +1,4 @@
-//  CellSizingModes.swift
+//  CellSizeModes.swift
 //  DMY-Tabs-Calendar  ∙  1st commit Apr. 07, 2019  ∙  Created by Garth Snyder a.k.a. gladiusKatana ⚔️
 
 import UIKit
@@ -7,7 +7,6 @@ extension CCVFlowLayout { // although this may be useful to call from the collec
     
     func resetDimensionIfSquareCellsOn() {
         switch squareCellMode {
-            
         case .autoSquareWidthFromHeight:
             cellWd = cellHt
             

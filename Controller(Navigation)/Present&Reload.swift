@@ -9,8 +9,8 @@ extension CollectionVC {
         
         if previousOrientation == "landscape" && currentOrientation == "portrait"
             || willPresentVCAgainBecauseAppJustEnteredForeground {
-            //print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
             rePresentedVCFromButton = false
+            //print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
             
             setupTitleAndPresentViewController(vc: vc) { () -> () in
                 previousOrientation = currentOrientation
@@ -23,12 +23,12 @@ extension CollectionVC {
         }
     }
     
-    func gotoView(vc: CollectionVC) {                                                                       //print("\nshowing vc \(vc)")
+    func gotoView(vc: CollectionVC) {                                                               //print("\nshowing vc \(vc)")
         if currentTopVC != vc {
             checkOrientation()
             
             setupTitleAndPresentViewController(vc: vc) { () -> () in
-                if currentOrientation == "landscape" {                                                      //print("pushed button when in landscape")
+                if currentOrientation == "landscape" {                                              //print("pushed button when in landscape")
                     reloadCV(after: 0.02)
                 }
                 //else {print("just did goto from portrait")}
@@ -36,7 +36,7 @@ extension CollectionVC {
         } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
     }
     
-    func setupTitleAndPresentViewController(vc: CollectionVC, completion: () -> ()) {                       //print("\ndismissing/presenting") // vc: \(vc)
+    func setupTitleAndPresentViewController(vc: CollectionVC, completion: () -> ()) {               //print("\ndismissing/presenting") // vc: \(vc)
         setupAndPresent(vc: vc)
         completion()
     }

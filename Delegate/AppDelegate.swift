@@ -14,7 +14,7 @@ import UIKit
         window?.makeKeyAndVisible()
         
         modelName = UIDevice.modelName
-        getOrientationAtLaunch()                                                ; print("launching on \(modelName), in \(launchOrientation) orientation")
+        getOrientationAtLaunch()                                            ; print("launching on \(modelName), in \(launchOrientation) orientation")
         
         statusBar = UIApplication.shared.value(forKey: "statusBar") as! UIView
         if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
@@ -24,7 +24,7 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
-        setCurrentDate()                                                        ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)")
+        setCurrentDate()                                                    ; print("launched on \(weekday), \(monthString) \(dayInt), \(year)")
         
         return true
     }
@@ -37,10 +37,10 @@ import UIKit
         
         navController = UINavigationController(rootViewController: backgroundVC)
         
-        window?.rootViewController = navController                              //; print("VCs*: \(String(describing: nav Controller?.viewControllers))")
+        window?.rootViewController = navController                          //; print("VCs*: \(String(describing: nav Controller?.viewControllers))")
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            viewControllerOne.setupAndPresent(vc: viewControllerOne)//just need SOME uiviewcontroller to call this func., even if it's not in navController
+            viewControllerOne.setupAndPresent(vc: viewControllerOne)        // just need a uiviewcontroller (any of them) to call this func.
         }
         
         return true

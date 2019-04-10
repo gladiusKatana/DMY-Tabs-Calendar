@@ -12,13 +12,17 @@ extension CollectionVC {
         }
         
         monthButtonLeftImage = (UIImage(named: "worra")?.withRenderingMode(.alwaysTemplate))!
-        monthButtonLeft = UIButton(frame: CGRect(x: 53, y: buttonYPosition, width: buttonSize, height: buttonSize))
+        monthButtonLeft = UIButton(frame: CGRect(x: 53,
+                                                 y: buttonYPosition, width: buttonSize, height: buttonSize))
+        
         monthButtonLeft.setImage(monthButtonLeftImage, for: UIControl.State())
         monthButtonLeft.tintColor = headerColour
         monthButtonLeft.addTarget(self, action: #selector(decrementMonth), for: UIControl.Event.touchUpInside)
         
         monthButtonRightImage = (UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate))!
-        monthButtonRight = UIButton(frame: CGRect(x: Int(view.frame.width) - 53 - buttonSize, y: buttonYPosition, width: buttonSize, height: buttonSize))
+        monthButtonRight = UIButton(frame: CGRect(x: Int(view.frame.width) - 53 - buttonSize,
+                                                  y: buttonYPosition, width: buttonSize, height: buttonSize))
+        
         monthButtonRight.setImage(monthButtonRightImage, for: UIControl.State())
         monthButtonRight.tintColor = headerColour
         monthButtonRight.addTarget(self, action: #selector(incrementMonth), for: UIControl.Event.touchUpInside)

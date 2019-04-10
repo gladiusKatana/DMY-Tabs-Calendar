@@ -18,13 +18,13 @@ extension CCVFlowLayout {
         yOffSet = collectionView!.contentOffset.y + CGFloat(navBarHeight + statusBarHeight - statusBarDelta) //print("yo: \(yOffSet)")
         xOffSet = collectionView!.contentOffset.x
         
-        checkOrientation()                                              //print(substringWithAppends(input: currentTopVC.navBarTitle, preceding: "---------------------prepare cv  ", following:  "  cell width: \(cellWidth!)  nav bar height: \(navBarHeight)"))
+        checkOrientation()                          //print(substringWithAppends(input: currentTopVC.navBarTitle, preceding: "---------------------prepare cv  ", following:  "  cell width: \(cellWidth!)  nav bar height: \(navBarHeight)"))
         
         if previousOrientation != currentOrientation  {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 currentTopVC.reloadAfterPreparingVCAndPossiblyPresentingItAgain(vc: currentTopVC)
             }
-        } //else {print("will not call "reload-after-preparing-vc-and-possibly-presenting-it-again"")}
+        }//else {print("will not call "reload-after-preparing-vc-and-possibly-presenting-it-again"")}
     }
     
     func calculateSizes() {                                                                 //print("resizing cells")

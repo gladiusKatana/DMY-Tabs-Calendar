@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06112F42225D88CF002579DF /* MonthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNavigation.swift */; };
+		06112F42225D88CF002579DF /* MonthNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNav.swift */; };
 		061F85A2225E5271001C28B4 /* ButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A1225E5271001C28B4 /* ButtonSetup.swift */; };
+		061F85A4225E6EED001C28B4 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A3225E6EED001C28B4 /* CalendarVars.swift */; };
 		06349AD7225ACCBB00FBFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD6225ACCBB00FBFE88 /* Assets.xcassets */; };
 		06349ADA225ACCBB00FBFE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD8225ACCBB00FBFE88 /* LaunchScreen.storyboard */; };
 		06349AE5225ACDCF00FBFE88 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE2225ACDCF00FBFE88 /* Orientation.swift */; };
@@ -21,7 +22,7 @@
 		06349B04225ACE0000FBFE88 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF0225ACE0000FBFE88 /* Colours.swift */; };
 		06349B05225ACE0000FBFE88 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF1225ACE0000FBFE88 /* Attributes.swift */; };
 		06349B06225ACE0000FBFE88 /* ZIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF2225ACE0000FBFE88 /* ZIndex.swift */; };
-		06349B07225ACE0000FBFE88 /* CellSizingModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF3225ACE0000FBFE88 /* CellSizingModes.swift */; };
+		06349B07225ACE0000FBFE88 /* CellSizeModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF3225ACE0000FBFE88 /* CellSizeModes.swift */; };
 		06349B08225ACE0000FBFE88 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF4225ACE0000FBFE88 /* Layout.swift */; };
 		06349B09225ACE0000FBFE88 /* Prepare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF5225ACE0000FBFE88 /* Prepare.swift */; };
 		06349B0A225ACE0000FBFE88 /* TestSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AF7225ACE0000FBFE88 /* TestSquare.swift */; };
@@ -37,8 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06112F41225D88CF002579DF /* MonthNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNavigation.swift; sourceTree = "<group>"; };
+		06112F41225D88CF002579DF /* MonthNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNav.swift; sourceTree = "<group>"; };
 		061F85A1225E5271001C28B4 /* ButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetup.swift; sourceTree = "<group>"; };
+		061F85A3225E6EED001C28B4 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 		06349ACC225ACCB900FBFE88 /* DMY-Tabs-Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DMY-Tabs-Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06349AD6225ACCBB00FBFE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06349AD9225ACCBB00FBFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		06349AF0225ACE0000FBFE88 /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		06349AF1225ACE0000FBFE88 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		06349AF2225ACE0000FBFE88 /* ZIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZIndex.swift; sourceTree = "<group>"; };
-		06349AF3225ACE0000FBFE88 /* CellSizingModes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSizingModes.swift; sourceTree = "<group>"; };
+		06349AF3225ACE0000FBFE88 /* CellSizeModes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSizeModes.swift; sourceTree = "<group>"; };
 		06349AF4225ACE0000FBFE88 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		06349AF5225ACE0000FBFE88 /* Prepare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prepare.swift; sourceTree = "<group>"; };
 		06349AF7225ACE0000FBFE88 /* TestSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSquare.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				06349AE9225ACDDB00FBFE88 /* Description.swift */,
 				06349AE8225ACDDB00FBFE88 /* Vars.swift */,
+				061F85A3225E6EED001C28B4 /* CalendarVars.swift */,
 				06349AE1225ACDCF00FBFE88 /* Delegate */,
 				06349AEC225ACE0000FBFE88 /* Model */,
 				06349AEF225ACE0000FBFE88 /* View */,
@@ -137,7 +140,7 @@
 			children = (
 				06349AF4225ACE0000FBFE88 /* Layout.swift */,
 				06349AF5225ACE0000FBFE88 /* Prepare.swift */,
-				06349AF3225ACE0000FBFE88 /* CellSizingModes.swift */,
+				06349AF3225ACE0000FBFE88 /* CellSizeModes.swift */,
 				06349AF1225ACE0000FBFE88 /* Attributes.swift */,
 				06349AF2225ACE0000FBFE88 /* ZIndex.swift */,
 				06349AF0225ACE0000FBFE88 /* Colours.swift */,
@@ -149,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				06349AE2225ACDCF00FBFE88 /* Orientation.swift */,
-				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
 				06349AF9225ACE0000FBFE88 /* DeviceType.swift */,
+				06349AF7225ACE0000FBFE88 /* TestSquare.swift */,
 			);
 			path = Checks;
 			sourceTree = "<group>";
@@ -171,7 +174,7 @@
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B13225AFBAF00FBFE88 /* CellText.swift */,
-				06112F41225D88CF002579DF /* MonthNavigation.swift */,
+				06112F41225D88CF002579DF /* MonthNav.swift */,
 				061F85A1225E5271001C28B4 /* ButtonSetup.swift */,
 				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
 			);
@@ -255,9 +258,10 @@
 				06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */,
 				06349AE7225ACDCF00FBFE88 /* AppDelegate.swift in Sources */,
 				06349B06225ACE0000FBFE88 /* ZIndex.swift in Sources */,
-				06112F42225D88CF002579DF /* MonthNavigation.swift in Sources */,
+				06112F42225D88CF002579DF /* MonthNav.swift in Sources */,
 				06349B03225ACE0000FBFE88 /* StringMethods.swift in Sources */,
-				06349B07225ACE0000FBFE88 /* CellSizingModes.swift in Sources */,
+				061F85A4225E6EED001C28B4 /* CalendarVars.swift in Sources */,
+				06349B07225ACE0000FBFE88 /* CellSizeModes.swift in Sources */,
 				06349AEA225ACDDB00FBFE88 /* Vars.swift in Sources */,
 				06349B08225ACE0000FBFE88 /* Layout.swift in Sources */,
 				06349AEB225ACDDB00FBFE88 /* Description.swift in Sources */,

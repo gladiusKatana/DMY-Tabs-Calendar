@@ -7,8 +7,8 @@ extension AppDelegate {
     
     func getOrientationAtLaunch() {
         
-        let launchHeight = Double(globalKeyWindow.frame.height) //; print("view frame height \(launchHeight)")
-        launchWidth = Double(globalKeyWindow.frame.width)       //;  print("view frame width \(launchWidth)")
+        let launchHeight = Double(globalKeyWindow.frame.height)     //; print("view frame height \(launchHeight)")
+        launchWidth = Double(globalKeyWindow.frame.width)           //;  print("view frame width \(launchWidth)")
         
         if launchHeight > launchWidth {
             launchOrientation = "portrait"
@@ -36,5 +36,5 @@ func checkOrientation() {
     else if currentHeight < currentWidth {
         currentOrientation = "landscape"
     }
-    else {print("\n\nApparently, somehow, the global key window's frame's height & width are being evaluated as equal...")} //shouldn't ever get called
+    else {print("\n\nApparently, somehow, the global key window's frame's height & width are being evaluated as equal...")} //shouldn't get called
 }

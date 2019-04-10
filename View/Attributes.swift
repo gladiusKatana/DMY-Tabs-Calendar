@@ -11,7 +11,7 @@ extension CCVFlowLayout {
         super.invalidateLayout()
     }
     
-    override var collectionViewContentSize: CGSize {                                                            //print("content size = \(contentSize)")
+    override var collectionViewContentSize: CGSize {                                                            //print("size = \(contentSize)")
         let w = CGFloat(cols) * widthPlusSpace
         let h = CGFloat(rows) * heightPlusSpace
         return CGSize(width: w, height: h)
@@ -28,7 +28,7 @@ extension CCVFlowLayout {
                 if !loadsHorizontal {ip = IndexPath(item: i, section: j)}
                 else                {ip = IndexPath(item: j, section: i)}
                 
-                let attribute = UICollectionViewLayoutAttributes(forCellWith: ip)///= self.layoutAttributesForItem(at: ip)! //*not implementing this method
+                let attribute = UICollectionViewLayoutAttributes(forCellWith: ip)   //previously used:  = self.layoutAttributesForItem(at: ip)!
                 
                 let xDefault : CGFloat = CGFloat(j) * widthPlusSpace
                 let yDefault : CGFloat = CGFloat(i) * heightPlusSpace

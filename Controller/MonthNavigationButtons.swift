@@ -48,7 +48,21 @@ extension CollectionVC {
     
     
     @objc func decrementMonth() {                                    //print("decrementing month")
+        var someDayLastMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
+        if dayInt <= 15 {
+            someDayLastMonth = currentDate - TimeInterval(86400 * 16)
+        }
+        else {
+            someDayLastMonth = currentDate - TimeInterval(86400 * 35)
+        }                                                                       //; displayDateForDebugging(someDayNextMonth)
         
+        let daysBack = getDayFrom(date: someDayLastMonth) - 1                   //; print("days back: \(daysBack)")
+        currentDate = someDayLastMonth - TimeInterval(86400 * daysBack)
+        
+        setCurrentDate()                                                        //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
+        
+        setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
+        reloadCollectionView()
     }
     
     

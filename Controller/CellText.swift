@@ -9,26 +9,35 @@ extension CollectionVC {
         
         let column = indexPath.item ; let row = indexPath.section // since loadsHorizontal should be true for a (typical) calendar
         
-        cell.titleLabel.textColor = .white
-        
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
+        
         
         if getMonthStringFrom(date: currentDate) == getMonthStringFrom(date: Date())
         && row == todayCalendarCellRow && column == todayCalendarCellColumn
-        {   //currentDate == Date() &&
-            cell.backgroundColor = icyBlue
+        {
+            cell.backgroundColor = platinumUltraLite
             cell.titleLabel.text = "\(dayInt)"
         }
     
         let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
-        let cellDate = currentDate + TimeInterval(daysAhead)
-        let (_, _, dayIntForDisplay, _) = displayDate(cellDate)
+        cell.cellDate = currentDate + TimeInterval(daysAhead)
+        let (_, _, dayIntForDisplay, _) = displayDate(cell.cellDate)
 
+        
         if row == 0 {//< downcastLayout!.lockedHeaderSections { // probably won't want more than one locked header section (even more so for rows)
             cell.titleLabel.text = dayLabels[column]
         }
         else {
             cell.titleLabel.text = "\(dayIntForDisplay)"
+        }
+        
+        
+        if getMonthStringFrom(date: cell.cellDate) == getMonthStringFrom(date: currentDate) {
+            cell.titleLabel.textColor = platinum
+        }
+        else {
+            if row == 0 {cell.titleLabel.textColor = icyBlue}
+            else {cell.titleLabel.textColor = platinumUltraLite}
         }
     }
 }

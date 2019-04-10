@@ -27,7 +27,8 @@ var graySeven = UIColor.COOOKIE(0, g: 0, b: 0, a: 0.7)
 
 var platinum = UIColor.COOOKIE(214, g: 214, b: 214, a: 1)
 var platinumMedium = UIColor.COOOKIE(214, g: 214, b: 255, a: 0.8)
-var platinumUltraLite = UIColor.COOOKIE(214, g: 214, b: 255, a: 0.45)
+var platinumLite = UIColor.COOOKIE(214, g: 214, b: 255, a: 0.45)
+var platinumUltraLite = UIColor.COOOKIE(214, g: 214, b: 255, a: 0.25)
 var platinumBarelyThere = UIColor.COOOKIE(214, g: 214, b: 255, a: 0.1)
 
 

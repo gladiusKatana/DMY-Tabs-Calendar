@@ -9,13 +9,15 @@ class CustomCell: UICollectionViewCell {
     
     lazy var titleLabel = UILabel()
     
+    var cellDate = Date()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.backgroundColor = cellDefaultColour
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.font = UIFont.systemFont(ofSize: 11, weight: .ultraLight) //UIFont(name: "Helvetica Neue", size: 12)
+        titleLabel.font = UIFont.systemFont(ofSize: 12, weight: .ultraLight) //UIFont(name: "Helvetica Neue", size: 12)
         
         self.addSubview(titleLabel)
         

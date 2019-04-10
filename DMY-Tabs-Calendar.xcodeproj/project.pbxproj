@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06112F42225D88CF002579DF /* MonthNavigationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNavigationButtons.swift */; };
+		06112F42225D88CF002579DF /* MonthNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNav.swift */; };
 		06349AD7225ACCBB00FBFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD6225ACCBB00FBFE88 /* Assets.xcassets */; };
 		06349ADA225ACCBB00FBFE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD8225ACCBB00FBFE88 /* LaunchScreen.storyboard */; };
 		06349AE5225ACDCF00FBFE88 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AE2225ACDCF00FBFE88 /* Orientation.swift */; };
@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06112F41225D88CF002579DF /* MonthNavigationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNavigationButtons.swift; sourceTree = "<group>"; };
+		06112F41225D88CF002579DF /* MonthNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNav.swift; sourceTree = "<group>"; };
 		06349ACC225ACCB900FBFE88 /* DMY-Tabs-Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DMY-Tabs-Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06349AD6225ACCBB00FBFE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06349AD9225ACCBB00FBFE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
-				06112F41225D88CF002579DF /* MonthNavigationButtons.swift */,
+				06112F41225D88CF002579DF /* MonthNav.swift */,
 				06349B13225AFBAF00FBFE88 /* CellText.swift */,
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
@@ -252,7 +252,7 @@
 				06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */,
 				06349AE7225ACDCF00FBFE88 /* AppDelegate.swift in Sources */,
 				06349B06225ACE0000FBFE88 /* ZIndex.swift in Sources */,
-				06112F42225D88CF002579DF /* MonthNavigationButtons.swift in Sources */,
+				06112F42225D88CF002579DF /* MonthNav.swift in Sources */,
 				06349B03225ACE0000FBFE88 /* StringMethods.swift in Sources */,
 				06349B07225ACE0000FBFE88 /* CellSizingModes.swift in Sources */,
 				06349AEA225ACDDB00FBFE88 /* Vars.swift in Sources */,

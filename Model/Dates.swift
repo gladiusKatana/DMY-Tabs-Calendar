@@ -4,6 +4,12 @@
 
 import UIKit
 
+func setCurrentDate() {
+    (weekday, monthStr, dayInt, year) = displayDate(currentDate)
+    todayCalendarCellRow = dayInt / 7 + 1
+    todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+}
+
 
 func displayDate(_ inputDate: Date)
     -> (weekday: String, monthStr: String, dayInt: Int, year: Int)

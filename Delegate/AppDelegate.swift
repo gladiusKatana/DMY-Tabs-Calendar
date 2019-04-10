@@ -25,9 +25,7 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
-        (weekday, monthStr, dayInt, year) = displayDate(Date())                 ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)")
-        todayCalendarCellRow = dayInt / 7 + 1
-        todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+        setCurrentDate()                                                        ; print("launched on \(weekday), \(monthStr) \(dayInt), \(year)")
         
         return true
     }
@@ -40,7 +38,7 @@ import UIKit
         
         navController = UINavigationController(rootViewController: backgroundVC)
         
-        window?.rootViewController = navController                          //; print("VCs*: \(String(describing: nav Controller?.viewControllers))")
+        window?.rootViewController = navController                              //; print("VCs*: \(String(describing: nav Controller?.viewControllers))")
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             viewControllerOne.setupAndPresent(vc: viewControllerOne)//just need SOME uiviewcontroller to call this func., even if it's not in navController

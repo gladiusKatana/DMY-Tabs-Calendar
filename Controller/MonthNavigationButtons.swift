@@ -41,11 +41,14 @@ extension CollectionVC {
         let daysBack = getDayFrom(date: someDayNextMonth) - 1                   //; print("days back: \(daysBack)")
         currentDate = someDayNextMonth - TimeInterval(86400 * daysBack)
         
-        (weekday, monthStr, dayInt, year) = displayDate(currentDate)            //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
-        todayCalendarCellRow = dayInt / 7 + 1
-        todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
-        reloadCollectionView()
+//        (weekday, monthStr, dayInt, year) = displayDate(currentDate)            //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
+//        todayCalendarCellRow = dayInt / 7 + 1
+//        todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+        
+        setCurrentDate()                                                        //; print("\n----------now it's \(weekday), \(monthStr) \(dayInt), \(year)")
+        
         setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
+        reloadCollectionView()
     }
     
     

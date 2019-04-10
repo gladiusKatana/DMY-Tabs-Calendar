@@ -27,15 +27,15 @@ class CCVFlowLayout : UICollectionViewFlowLayout {  // stands for "Custom Collec
         self.loadsHorizontal = loadsHorizontal;     self.squareCellMode = squareCellMode
         super.init()
         
-        if cellWidth != nil && cellHeight != nil    {cellDimensionsMode = .widthAndHeightHardcoded}
+        if cellWidth != nil && cellHeight != nil        {cellDimensionsMode = .widthAndHeightHardcoded}
             
-        else if cellWidth == nil && cellHeight != nil {cellDimensionsMode = .heightHardcoded}
+        else if cellWidth == nil && cellHeight != nil   {cellDimensionsMode = .heightHardcoded}
             
-        else if cellWidth != nil && cellHeight == nil {cellDimensionsMode = .widthHardcoded}
+        else if cellWidth != nil && cellHeight == nil   {cellDimensionsMode = .widthHardcoded}
             
-        else if cellWidth == nil && cellHeight == nil {cellDimensionsMode = .neitherHardcoded}
+        else                                            {cellDimensionsMode = .neitherHardcoded}
             
-        else {print("error with cell width and/or height initialization  cell width \(String(describing: cellWidth))  cell height \(String(describing: cellHeight))\n")} // this should never be executed
+//        else {print("error with cell width and/or height initialization  cell width \(String(describing: cellWidth))  cell height \(String(describing: cellHeight))\n")} // this should never be executed
         
         //print(cellDimensionsMode.simpleDescription())
         //print(squareCellMode.simpleDescription())

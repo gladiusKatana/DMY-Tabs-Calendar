@@ -4,13 +4,6 @@
 import UIKit
 
 
-extension UIColor {
-    static func COOOKIE(_ r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
-        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: a)
-    }
-}
-
-
 let NUM = CGFloat(42)
 var headerColour = UIColor.COOOKIE(NUM, g: NUM, b: NUM, a: 1) // https://www.youtube.com/watch?v=_OKGUAbpj5k
 var cellDefaultColour = navyBlue
@@ -32,3 +25,11 @@ var skyBackgroundColour = UIColor(patternImage: skyBackgroundImage!)            
 
 
 var randomColours = [UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.yellow.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor, UIColor.purple.cgColor, UIColor.white.cgColor]                                   // used in TestSquare.swift
+
+
+
+extension UIColor {
+    static func COOOKIE(_ r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: a)
+    }
+}

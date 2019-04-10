@@ -34,14 +34,14 @@ class CollectionVC: UICollectionViewController {
         setupNotificationForStatusBarHeightChange()
         
         setTopViewController()
-        print(substringWithAppends(input: navBarTitle, preceding: "\nview ", following:  " loaded"))
+        print(substringWithAppends(input: navBarTitle, preceding: "\n💾view ", following:  " loaded"))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setTopViewController()
         
         if rePresentedVCFromButton {
-            print(substringWithAppends(input: navBarTitle, preceding: "\nview ", following:  " appeared"))
+            print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
         }
         
         setupViewTitle(titleText: "\(monthStr) \(year)\n", numLines: 1, alignment: .left)
@@ -55,7 +55,7 @@ class CollectionVC: UICollectionViewController {
         
         setCellColours(cell: cell, indexPath: indexPath)
         setCellText(cell: cell, indexPath: indexPath)
-//        print(indexPath)
+        //print(indexPath)
         
         return cell
     }

@@ -20,7 +20,7 @@ extension CollectionVC {
         } else {
             previousOrientation = currentOrientation
             reloadCollectionView()  // should it have a time delay, as in the above completion block? (will test over time, with different devices)
-//            reloadCV(after: 0.02)
+            //reloadCV(after: 0.02)
         }
     }
     

@@ -40,8 +40,8 @@ class CCVFlowLayout : UICollectionViewFlowLayout {// stands for "Custom Collecti
             
         else {print("error with cell width and/or height initialization  cell width \(String(describing: cellWidth))  cell height \(String(describing: cellHeight))\n")} // this should never be executed
         
-//        print(cellDimensionsMode.simpleDescription())
-//        print(squareCellMode.simpleDescription())
+        //print(cellDimensionsMode.simpleDescription())
+        //print(squareCellMode.simpleDescription())
         
         calculateSizes()
         self.cellWidth = cellWd;   self.cellHeight = cellHt

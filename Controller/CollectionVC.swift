@@ -18,11 +18,11 @@ class CollectionVC: UICollectionViewController {
     required init?(coder aDecoder: NSCoder) {fatalError("init(coder:) has not been implemented")}
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (downcastLayout!.loadsHorizontal) ? downcastLayout!.cols : downcastLayout!.rows
+        return (downcastLayout!.loadsHorizontally) ? downcastLayout!.cols : downcastLayout!.rows
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return (downcastLayout!.loadsHorizontal) ? downcastLayout!.rows : downcastLayout!.cols
+        return (downcastLayout!.loadsHorizontally) ? downcastLayout!.rows : downcastLayout!.cols
     }
     
     override func viewDidLoad() {

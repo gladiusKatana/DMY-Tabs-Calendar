@@ -25,7 +25,7 @@ extension CCVFlowLayout {
                 
                 var ip : IndexPath = IndexPath()
                 
-                if !loadsHorizontal {ip = IndexPath(item: i, section: j)}
+                if !loadsHorizontally {ip = IndexPath(item: i, section: j)}
                 else                {ip = IndexPath(item: j, section: i)}
                 
                 let attribute = UICollectionViewLayoutAttributes(forCellWith: ip)   //previously used:  = self.layoutAttributesForItem(at: ip)!

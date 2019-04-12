@@ -14,12 +14,12 @@ var cellGap = CGFloat(0)          // if nonzero, do NOT make this smaller than: 
 //--------------------------------------------------------------------------------------------
 var daysLayout = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1,
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
-                                loadsHorizontal: true,                      // note, if loadsHorizontal is true, 'rows' look like columns
+                                loadsHorizontally: true,                      // note, if loadsHorizontally is true, 'rows' look like columns
                                 squareCellMode: .autoSquareHeightFromWidth)
 
 var monthsLayout = CCVFlowLayout(rows: 4, cols: 3, lockedHeaderRows: 0, lockedHeaderSections: 0,
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
-                                loadsHorizontal: false,
+                                loadsHorizontally: false,
                                 squareCellMode: .noAutoSquare)//* why no autocomplete for enum cases?
 
 var daysVC = CollectionVC(type: .days, headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: daysLayout)

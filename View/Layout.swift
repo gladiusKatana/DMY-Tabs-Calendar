@@ -9,12 +9,12 @@ class CCVFlowLayout : UICollectionViewFlowLayout {  // stands for "Custom Collec
     var xDefault = CGFloat(0);      var yDefault = CGFloat(0);  var widthPlusSpace = CGFloat(0);    var heightPlusSpace = CGFloat(0)
     var cols = 0;                   var rows = 0;               var lockedHeaderRows = 0;           var lockedHeaderSections = 0
     var contentSize = CGSize.zero
-    var cellDimensionsMode = CellDimensionsMode.neitherHardcoded;   var loadsHorizontal = false
+    var cellDimensionsMode = CellDimensionsMode.neitherHardcoded;   var loadsHorizontally = false
     var squareCellMode = SquareCellMode.noAutoSquare;               var squareCells = false
     
-    init(rows: Int, cols: Int, lockedHeaderRows: Int, lockedHeaderSections: Int, cellWidth: CGFloat?, cellHeight: CGFloat?, hSpace: CGFloat, vSpace: CGFloat, loadsHorizontal: Bool, squareCellMode: SquareCellMode) {
+    init(rows: Int, cols: Int, lockedHeaderRows: Int, lockedHeaderSections: Int, cellWidth: CGFloat?, cellHeight: CGFloat?, hSpace: CGFloat, vSpace: CGFloat, loadsHorizontally: Bool, squareCellMode: SquareCellMode) {
         
-        if !loadsHorizontal {
+        if !loadsHorizontally {
             self.rows = rows;                       self.cols = cols
         }
         else {
@@ -24,7 +24,7 @@ class CCVFlowLayout : UICollectionViewFlowLayout {  // stands for "Custom Collec
         self.lockedHeaderRows = lockedHeaderRows;   self.lockedHeaderSections = lockedHeaderSections
         self.cellWidth = cellWidth;                 self.cellHeight = cellHeight
         self.hSpace = hSpace;                       self.vSpace = vSpace
-        self.loadsHorizontal = loadsHorizontal;     self.squareCellMode = squareCellMode
+        self.loadsHorizontally = loadsHorizontally;     self.squareCellMode = squareCellMode
         super.init()
         
         if cellWidth != nil && cellHeight != nil        {cellDimensionsMode = .widthAndHeightHardcoded}

@@ -5,8 +5,12 @@ import UIKit
 
 func processCurrentDate() {
     (weekday, monthString, dayInt, year) = displayDate(currentDate)
-    todayCalendarCellRow = dayInt / 7 + 1
-    todayCalendarCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+    
+    todayCellRow = dayInt / 7 + 1
+    todayCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
+    
+    thisMonthCellRow = months.firstIndex(of: monthString)! / 4
+    thisMonthCellColumn = (months.firstIndex(of: monthString)! + 1) % 3    
 }
 
 

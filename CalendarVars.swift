@@ -8,10 +8,19 @@ var monthButtonLeft = UIButton();       var monthButtonRight = UIButton();
 
 var monthButtonRightImage = UIImage();  var monthButtonLeftImage = UIImage()
 
+
 var currentDate = Date()
+
+
 
 var (weekday, monthString, dayInt, year) = ("", "", 0, 0)
 
 var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]//["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
-var todayCalendarCellRow = 0;       var todayCalendarCellColumn = 0
+var todayCellRow = 0;       var todayCellColumn = 0
+
+
+
+var months = ["January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+var thisMonthCellRow = 0;   var thisMonthCellColumn = 0

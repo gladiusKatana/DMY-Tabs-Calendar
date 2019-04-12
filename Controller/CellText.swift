@@ -7,24 +7,22 @@ extension CollectionVC {
     
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
         
-        let column = indexPath.item ; let row = indexPath.section // since loadsHorizontal should be true for a (typical) calendar
+        let column = indexPath.item ; let row = indexPath.section // since loadsHorizontal should be true for a (typical) calendar collection vc
         cell.titleLabel.textColor = platinum
         
-        if collectionViewType == .days {setMonthCellText(cell: cell, column: column, row: row)}
-        
+        if collectionViewType == .days {setTextOfDailyCells(cell: cell, column: column, row: row)}
+        if collectionViewType == .months {setTextOfMonthlyCells(cell: cell, column: column, row: row)}
     }
     
-    func setMonthCellText (cell: CustomCell, column: Int, row: Int) {
+    
+    func setTextOfDailyCells (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        if getMonthStringFrom(currentDate) == getMonthStringFrom(Date())
-            && row == todayCalendarCellRow && column == todayCalendarCellColumn
-        {
+        if getMonthStringFrom(currentDate) == getMonthStringFrom(Date()) && row == todayCellRow && column == todayCellColumn {
             cell.backgroundColor = platinumLite
-            cell.titleLabel.text = "\(dayInt)"
         }
         
-        let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
+        let daysAhead = 86400 * (column - todayCellColumn + 7 * (row - todayCellRow))
         cell.cellDate = currentDate + TimeInterval(daysAhead)
         let (_, _, dayIntForDisplay, _) = displayDate(cell.cellDate)
         
@@ -42,6 +40,15 @@ extension CollectionVC {
             if row == 0 {cell.titleLabel.textColor = icyBlue}
             else {cell.titleLabel.textColor = platinumLite}
         }
+    }
+    
+    
+    func setTextOfMonthlyCells (cell: CustomCell, column: Int, row: Int) {
+        if row == thisMonthCellRow && column == thisMonthCellColumn {
+            cell.backgroundColor = platinumLite
+        }
+        
+        cell.titleLabel.text = months[column * 3 + row]
     }
 }
 

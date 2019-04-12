@@ -83,6 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061025612260DC750004F464 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06349AF4225ACE0000FBFE88 /* Layout.swift */,
+				06349AF5225ACE0000FBFE88 /* Prepare.swift */,
+				06349AF3225ACE0000FBFE88 /* CellSizeModes.swift */,
+				06349AF1225ACE0000FBFE88 /* Attributes.swift */,
+				06349AF2225ACE0000FBFE88 /* ZIndex.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		06349AC3225ACCB900FBFE88 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +104,7 @@
 				06349AE1225ACDCF00FBFE88 /* Delegate */,
 				06349AEC225ACE0000FBFE88 /* Model */,
 				06349AEF225ACE0000FBFE88 /* View */,
+				061025612260DC750004F464 /* ViewModel */,
 				06349AFE225ACE0000FBFE88 /* Controller */,
 				06349AFA225ACE0000FBFE88 /* Controller(Navigation) */,
 				06349AF6225ACE0000FBFE88 /* Checks */,
@@ -140,11 +153,6 @@
 		06349AEF225ACE0000FBFE88 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				06349AF4225ACE0000FBFE88 /* Layout.swift */,
-				06349AF5225ACE0000FBFE88 /* Prepare.swift */,
-				06349AF3225ACE0000FBFE88 /* CellSizeModes.swift */,
-				06349AF1225ACE0000FBFE88 /* Attributes.swift */,
-				06349AF2225ACE0000FBFE88 /* ZIndex.swift */,
 				06349AF0225ACE0000FBFE88 /* Colours.swift */,
 			);
 			path = View;

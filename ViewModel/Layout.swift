@@ -5,9 +5,9 @@ import UIKit
 
 class CCVFlowLayout : UICollectionViewFlowLayout {  // stands for "Custom Collection View Flow Layout"
     var cellWidth: CGFloat?;        var cellHeight: CGFloat?
-    var hSpace = CGFloat(0);        var vSpace = CGFloat(0);    var cellWd = CGFloat(0);            var cellHt = CGFloat(0)
-    var xDefault = CGFloat(0);      var yDefault = CGFloat(0);  var widthPlusSpace = CGFloat(0);    var heightPlusSpace = CGFloat(0)
-    var cols = 0;                   var rows = 0;               var lockedHeaderRows = 0;           var lockedHeaderSections = 0
+    var hSpace = CGFloat(0);        var vSpace = CGFloat(0);        var cellWd = CGFloat(0);            var cellHt = CGFloat(0)
+    var xDefault = CGFloat(0);      var yDefault = CGFloat(0);      var widthPlusSpace = CGFloat(0);    var heightPlusSpace = CGFloat(0)
+    var cols = 0;                   var rows = 0;                   var lockedHeaderRows = 0;           var lockedHeaderSections = 0
     var contentSize = CGSize.zero
     var cellDimensionsMode = CellDimensionsMode.neitherHardcoded;   var loadsHorizontally = false
     var squareCellMode = SquareCellMode.noAutoSquare;               var squareCells = false

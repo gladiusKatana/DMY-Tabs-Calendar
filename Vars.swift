@@ -7,27 +7,27 @@ var globalKeyWindow = UIApplication.shared.keyWindow!
 
 var navController: UINavigationController? = UINavigationController()
 
-var cellGap = CGFloat(0)        // if nonzero, do NOT make this smaller than: 0.5 (iphone7), or else lines drawn inconsistently
-var testNum = 24                // only for testing, in the below vars
+var cellGap = CGFloat(0)          // if nonzero, do NOT make this smaller than: 0.5 (iphone7), or else lines drawn inconsistently
+//var testNum = 24                // only for testing, in the below vars
 
 
 //--------------------------------------------------------------------------------------------
-var vcLayoutOne = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1,
+var daysLayout = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1,
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
                                 loadsHorizontal: true,                      // note, if loadsHorizontal is true, 'rows' look like columns
                                 squareCellMode: .autoSquareHeightFromWidth)
 
-var vcLayoutTwo = vcLayoutOne/*CCVFlowLayout(rows: testNum, cols: testNum, lockedHeaderRows: 1, lockedHeaderSections: 1,
-                                cellWidth: 60, cellHeight: 40, hSpace: cellGap, vSpace: cellGap,
+var monthsLayout = CCVFlowLayout(rows: 4, cols: 3, lockedHeaderRows: 0, lockedHeaderSections: 0,
+                                cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
                                 loadsHorizontal: false,
-                                squareCellMode: .noAutoSquare)*///* why no autocomplete for enum cases?
+                                squareCellMode: .noAutoSquare)//* why no autocomplete for enum cases?
 
-var viewControllerOne = CollectionVC(headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: vcLayoutOne)
-var viewControllerTwo = CollectionVC(headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: vcLayoutTwo)
+var daysVC = CollectionVC(headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: daysLayout)
+var monthsVC = CollectionVC(headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: monthsLayout)
 //--------------------------------------------------------------------------------------------
 
 
-var currentTopVC : CollectionVC = CollectionVC(headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: vcLayoutOne)
+var currentTopVC : CollectionVC = CollectionVC(headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)
 var backgroundVC = UIViewController()
 
 var statusBar = UIView();           var navbarTitleLabel = UILabel();       var testRectanglelayer = CAShapeLayer()

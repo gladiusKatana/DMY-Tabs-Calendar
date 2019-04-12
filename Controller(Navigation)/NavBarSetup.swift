@@ -6,7 +6,7 @@ import UIKit
 extension CollectionVC {  
     
     func setupViewTitle(titleText: String, numLines: Int, alignment: NSTextAlignment) {
-        navbarTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1366, height: 20)) //1366 is the width (# of points wide) of the ipad pro 12.9"
+        navbarTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1366, height: 20)) //1366 is width (# of points) of the ipad pro 12.9"
         navbarTitleLabel.backgroundColor = .clear
         navbarTitleLabel.text = titleText; navbarTitleLabel.numberOfLines = numLines
         navbarTitleLabel.textAlignment = alignment
@@ -17,13 +17,13 @@ extension CollectionVC {
     }
     
     func setupNavBarButtons(_ withCustomColour: UIColor?, atIndex: Int?) {
-        let navSelectorForVCOne = #selector(buttonWrapperMethodforVCOne)
-        let navSelectorForVCTwo = #selector(ButtonWrapperMethodforVCTwo)
+        let navSelectorForDaysVC = #selector(buttonWrapperMethodforDaysVC)
+        let navSelectorForMonthsVC = #selector(ButtonWrapperMethodforMonthsVC)
         let navSelectorForReloading = #selector(reloadCollectionView)
-        let buttonOne = setupButton(selector: navSelectorForVCOne, title: "timetableImage")
-        let buttonTwo = setupButton(selector: navSelectorForVCTwo, title: "calendarImage")
+        let daysButton = setupButton(selector: navSelectorForDaysVC, title: "timetableImage")
+        let monthsButton = setupButton(selector: navSelectorForMonthsVC, title: "calendarImage")
         let reloadButton = setupButton(selector: navSelectorForReloading, title: "reloadButton")
-        navigationItem.rightBarButtonItems = [buttonTwo, buttonOne, reloadButton]
+        navigationItem.rightBarButtonItems = [monthsButton, daysButton, reloadButton]
         
         var barButtonColours = [grayTwo, grayTwo, .clear]
         
@@ -45,8 +45,8 @@ extension CollectionVC {
         return button
     }
     
-    @objc func buttonWrapperMethodforVCOne() {presentViaVCButton(vc: viewControllerOne)}
-    @objc func ButtonWrapperMethodforVCTwo() {presentViaVCButton(vc: viewControllerTwo)}
+    @objc func buttonWrapperMethodforDaysVC() {presentViaVCButton(vc: daysVC)}
+    @objc func ButtonWrapperMethodforMonthsVC() {presentViaVCButton(vc: monthsVC)}
     
     func presentViaVCButton(vc: CollectionVC) {
         rePresentedVCFromButton = true

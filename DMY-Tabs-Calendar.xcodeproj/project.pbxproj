@@ -97,6 +97,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		06102565226100EA0004F464 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
+				06B84BE522602C23004F44DD /* CollectionViewType.swift */,
+				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
+				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
+				061025632260FC530004F464 /* Selecting.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		06349AC3225ACCB900FBFE88 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +120,6 @@
 				06349AEF225ACE0000FBFE88 /* View */,
 				061025612260DC750004F464 /* ViewModel */,
 				06349AFE225ACE0000FBFE88 /* Controller */,
-				06349AFA225ACE0000FBFE88 /* Controller(Navigation) */,
 				06349AF6225ACE0000FBFE88 /* Checks */,
 				06349ACE225ACCB900FBFE88 /* DMY-Tabs-Calendar */,
 				06349ACD225ACCB900FBFE88 /* Products */,
@@ -170,7 +181,7 @@
 			path = Checks;
 			sourceTree = "<group>";
 		};
-		06349AFA225ACE0000FBFE88 /* Controller(Navigation) */ = {
+		06349AFA225ACE0000FBFE88 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
@@ -180,17 +191,14 @@
 				06349AFD225ACE0000FBFE88 /* Reload.swift */,
 				06349AFC225ACE0000FBFE88 /* Present&Reload.swift */,
 			);
-			path = "Controller(Navigation)";
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		06349AFE225ACE0000FBFE88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
-				06B84BE522602C23004F44DD /* CollectionViewType.swift */,
-				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
-				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
-				061025632260FC530004F464 /* Selecting.swift */,
+				06349AFA225ACE0000FBFE88 /* Navigation */,
+				06102565226100EA0004F464 /* VC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

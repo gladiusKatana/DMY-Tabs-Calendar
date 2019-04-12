@@ -14,6 +14,25 @@ func processCurrentDate() {
 }
 
 
+func createDate(_ year: Int, monthInt: Int, dayInt: Int) -> Date {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd HH:mm"
+    guard let date = formatter.date(from: "\(year)/\(monthInt)/\(dayInt) 00:00") else {
+        print("could not create date with this input, returning current date instead")
+//        pryntDate
+        return Date()
+    }
+    return date
+}
+
+
+func formalDateString(_ date: Date, comment: String) -> String {
+    let (wkday, monString, dayI, yr) = displayDate(date)
+    //return "\(comment) \(wkday), \(monString) \(dayI), \(yr)"
+    return "\(comment) \(monString) \(dayI)"                     // version for testing
+}
+
+
 func displayDate(_ inputDate: Date)
     -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
 {
@@ -31,7 +50,7 @@ func displayDate(_ inputDate: Date)
 }
 
 
-func getMonthStringFrom(_ date: Date) -> String {                           // below methods basically return same as above but selectively
+func getMonthStringFrom(_ date: Date) -> String {                           // below methods basically return same as above one, but selectively
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "MMMM"
     let nameOfMonth = dateFormatter.string(from: date)
     return nameOfMonth

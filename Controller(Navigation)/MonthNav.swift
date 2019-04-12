@@ -6,6 +6,7 @@ import UIKit
 extension CollectionVC {
     
     @objc func incrementMonth() {                                               //print("incrementing month")
+        
         var someDayNextMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
         if dayInt <= 15 {
             someDayNextMonth = currentDate + TimeInterval(86400 * 35)
@@ -19,6 +20,7 @@ extension CollectionVC {
     
     
     @objc func decrementMonth() {                                               //print("decrementing month")
+        
         var someDayLastMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
         if dayInt <= 15 {
             someDayLastMonth = currentDate - TimeInterval(86400 * 16)

@@ -24,7 +24,7 @@ import UIKit
         UINavigationBar.appearance().barTintColor = icyBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         
-        processCurrentDate()                                                ; print("launched on \(weekday), \(monthString) \(dayInt), \(year)")
+        processCurrentDate()                                                ; print(formalDateString(Date(), comment: "launched on"))
         
         return true
     }

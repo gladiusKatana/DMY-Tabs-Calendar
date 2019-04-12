@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061025642260FC540004F464 /* Selecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061025632260FC530004F464 /* Selecting.swift */; };
 		06112F42225D88CF002579DF /* MonthNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNav.swift */; };
 		061F85A2225E5271001C28B4 /* ButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A1225E5271001C28B4 /* ButtonSetup.swift */; };
 		061F85A4225E6EED001C28B4 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A3225E6EED001C28B4 /* CalendarVars.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061025632260FC530004F464 /* Selecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selecting.swift; sourceTree = "<group>"; };
 		06112F41225D88CF002579DF /* MonthNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNav.swift; sourceTree = "<group>"; };
 		061F85A1225E5271001C28B4 /* ButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetup.swift; sourceTree = "<group>"; };
 		061F85A3225E6EED001C28B4 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				06B84BE522602C23004F44DD /* CollectionViewType.swift */,
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
+				061025632260FC530004F464 /* Selecting.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				06349AE7225ACDCF00FBFE88 /* AppDelegate.swift in Sources */,
 				06349B06225ACE0000FBFE88 /* ZIndex.swift in Sources */,
 				06112F42225D88CF002579DF /* MonthNav.swift in Sources */,
+				061025642260FC540004F464 /* Selecting.swift in Sources */,
 				06349B03225ACE0000FBFE88 /* StringMethods.swift in Sources */,
 				061F85A4225E6EED001C28B4 /* CalendarVars.swift in Sources */,
 				06349B07225ACE0000FBFE88 /* CellSizeModes.swift in Sources */,

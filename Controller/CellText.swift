@@ -8,21 +8,25 @@ extension CollectionVC {
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
         
         let column = indexPath.item ; let row = indexPath.section // since loadsHorizontal should be true for a (typical) calendar
+        cell.titleLabel.textColor = platinum
         
+        if collectionViewType == .days {setMonthCellText(cell: cell, column: column, row: row)}
+        
+    }
+    
+    func setMonthCellText (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        
         if getMonthStringFrom(date: currentDate) == getMonthStringFrom(date: Date())
-        && row == todayCalendarCellRow && column == todayCalendarCellColumn
+            && row == todayCalendarCellRow && column == todayCalendarCellColumn
         {
-            cell.backgroundColor = platinumUltraLite
+            cell.backgroundColor = platinumLite
             cell.titleLabel.text = "\(dayInt)"
         }
-    
+        
         let daysAhead = 86400 * (column - todayCalendarCellColumn + 7 * (row - todayCalendarCellRow))
         cell.cellDate = currentDate + TimeInterval(daysAhead)
         let (_, _, dayIntForDisplay, _) = displayDate(cell.cellDate)
-
         
         if row == 0 {//< downcastLayout!.lockedHeaderSections { // probably won't want more than one locked header section (even more so for rows)
             cell.titleLabel.text = dayLabels[column]
@@ -31,13 +35,12 @@ extension CollectionVC {
             cell.titleLabel.text = "\(dayIntForDisplay)"
         }
         
-        
         if getMonthStringFrom(date: cell.cellDate) == getMonthStringFrom(date: currentDate) {
             cell.titleLabel.textColor = platinum
         }
         else {
             if row == 0 {cell.titleLabel.textColor = icyBlue}
-            else {cell.titleLabel.textColor = platinumUltraLite}
+            else {cell.titleLabel.textColor = platinumLite}
         }
     }
 }

@@ -22,12 +22,12 @@ var monthsLayout = CCVFlowLayout(rows: 4, cols: 3, lockedHeaderRows: 0, lockedHe
                                 loadsHorizontal: false,
                                 squareCellMode: .noAutoSquare)//* why no autocomplete for enum cases?
 
-var daysVC = CollectionVC(headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: daysLayout)
-var monthsVC = CollectionVC(headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: monthsLayout)
+var daysVC = CollectionVC(type: .days, headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: daysLayout)
+var monthsVC = CollectionVC(type: .months, headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: monthsLayout)
 //--------------------------------------------------------------------------------------------
 
 
-var currentTopVC : CollectionVC = CollectionVC(headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)
+var currentTopVC : CollectionVC = CollectionVC(type: .days, headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)
 var backgroundVC = UIViewController()
 
 var statusBar = UIView();           var navbarTitleLabel = UILabel();       var testRectanglelayer = CAShapeLayer()

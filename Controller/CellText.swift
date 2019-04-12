@@ -17,7 +17,7 @@ extension CollectionVC {
     func setMonthCellText (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        if getMonthStringFrom(date: currentDate) == getMonthStringFrom(date: Date())
+        if getMonthStringFrom(currentDate) == getMonthStringFrom(Date())
             && row == todayCalendarCellRow && column == todayCalendarCellColumn
         {
             cell.backgroundColor = platinumLite
@@ -35,7 +35,7 @@ extension CollectionVC {
             cell.titleLabel.text = "\(dayIntForDisplay)"
         }
         
-        if getMonthStringFrom(date: cell.cellDate) == getMonthStringFrom(date: currentDate) {
+        if getMonthStringFrom(cell.cellDate) == getMonthStringFrom(currentDate) {
             cell.titleLabel.textColor = platinum
         }
         else {

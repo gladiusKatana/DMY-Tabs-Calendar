@@ -27,13 +27,13 @@ func displayDate(_ inputDate: Date)
 }
 
 
-func getDayFrom(date: Date) -> Int {
+func getDayFrom(_ date: Date) -> Int {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "d"
     let day = Int(dateFormatter.string(from: date))
     return day!
 }
 
-func getMonthStringFrom(date: Date) -> String {
+func getMonthStringFrom(_ date: Date) -> String {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "MMMM"
     let nameOfMonth = dateFormatter.string(from: date)
     return nameOfMonth

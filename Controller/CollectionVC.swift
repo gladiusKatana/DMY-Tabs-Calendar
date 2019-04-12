@@ -39,9 +39,14 @@ class CollectionVC: UICollectionViewController {
         if rePresentedVCFromButton {
             print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
         }
-        setupViewTitle(titleText: "\(monthString) \(year)\n", numLines: 1, alignment: .left)
         setupNavBarButtons(graySeven, atIndex: colourIndex)
-        if collectionViewType == .days {setupMonthControlButtons()}
+        if collectionViewType == .days {
+            setupViewTitle(titleText: "\(monthString) \(year)", numLines: 1, alignment: .left)
+            setupMonthControlButtons()
+        }
+        else {
+            setupViewTitle(titleText: "\(year)", numLines: 1, alignment: .left)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

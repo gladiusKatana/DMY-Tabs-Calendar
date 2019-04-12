@@ -44,17 +44,19 @@ extension CollectionVC {
     
     func setupMonthlyCells (cell: CustomCell, column: Int, row: Int) {
         
-        if row == thisMonthCellRow && column == thisMonthCellColumn {
-            cell.backgroundColor = platinumLite
-        }
-        
         let monthIndex = column * 3 + row
         var monthCellDate = Date()
-
-        monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
+        
+        if row == thisMonthCellRow && column == thisMonthCellColumn {
+            cell.backgroundColor = platinumLite
+            monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: dayInt)
+        }
+        else {
+            monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
+        }
         
         cell.titleLabel.text = formalDateString(monthCellDate, comment: "")//months[monthIndex]
-    
+        
     }
 }
 

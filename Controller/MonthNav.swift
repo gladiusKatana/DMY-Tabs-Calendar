@@ -43,7 +43,7 @@ extension CollectionVC {
         
         processCurrentDate()                                                   
         
-        setupViewTitle(titleText: "\(monthString) \(year)\n", numLines: 1, alignment: .left)
+        setupViewTitle("\(monthString) \(year)\n", numLines: 1, alignment: .left)
         reloadCollectionView()
     }
     

@@ -6,16 +6,15 @@ import UIKit
 extension CollectionVC {
     
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
-        
-        let column = indexPath.item ; let row = indexPath.section // since loadsHorizontal should be true for a (typical) calendar collection vc
+        let column = indexPath.item ; let row = indexPath.section // since loadsHorizontally should be true for a (typical) calendar collection vc
         cell.titleLabel.textColor = platinum
         
-        if collectionViewType == .days {setTextOfDailyCells(cell: cell, column: column, row: row)}
-        if collectionViewType == .months {setTextOfMonthlyCells(cell: cell, column: column, row: row)}
+        if collectionViewType == .days {setupDailyCells(cell: cell, column: column, row: row)}
+        if collectionViewType == .months {setupMonthlyCells(cell: cell, column: column, row: row)}
     }
     
     
-    func setTextOfDailyCells (cell: CustomCell, column: Int, row: Int) {
+    func setupDailyCells (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
         if getMonthStringFrom(currentDate) == getMonthStringFrom(Date()) && row == todayCellRow && column == todayCellColumn {
@@ -43,7 +42,7 @@ extension CollectionVC {
     }
     
     
-    func setTextOfMonthlyCells (cell: CustomCell, column: Int, row: Int) {
+    func setupMonthlyCells (cell: CustomCell, column: Int, row: Int) {
         if row == thisMonthCellRow && column == thisMonthCellColumn {
             cell.backgroundColor = platinumLite
         }

@@ -5,7 +5,7 @@ import UIKit
 
 extension CollectionVC {  
     
-    func setupViewTitle(titleText: String, numLines: Int, alignment: NSTextAlignment) {
+    func setupViewTitle(_ titleText: String, numLines: Int, alignment: NSTextAlignment) {
         navbarTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 1366, height: 20)) //1366 is width (# of points) of the ipad pro 12.9"
         navbarTitleLabel.backgroundColor = .clear
         navbarTitleLabel.text = titleText; navbarTitleLabel.numberOfLines = numLines

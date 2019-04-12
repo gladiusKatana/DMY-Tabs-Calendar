@@ -41,11 +41,11 @@ class CollectionVC: UICollectionViewController {
         }
         setupNavBarButtons(graySeven, atIndex: colourIndex)
         if collectionViewType == .days {
-            setupViewTitle(titleText: "\(monthString) \(year)", numLines: 1, alignment: .left)
+            setupViewTitle("\(monthString) \(year)", numLines: 1, alignment: .left)
             setupMonthControlButtons()
         }
         else {
-            setupViewTitle(titleText: "\(year)", numLines: 1, alignment: .left)
+            setupViewTitle("\(year)", numLines: 1, alignment: .left)
         }
     }
     

@@ -42,7 +42,7 @@ extension CollectionVC {
     }
     
     func setupAndPresent(vc: CollectionVC) {
-        setupViewTitle(titleText: "", numLines: 1, alignment: .left)
+        setupViewTitle("", numLines: 1, alignment: .left)
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.dismissNavController {

@@ -33,7 +33,7 @@
 		06349B10225ACE0000FBFE88 /* CellColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349AFF225ACE0000FBFE88 /* CellColours.swift */; };
 		06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B00225ACE0000FBFE88 /* SetTopVC.swift */; };
 		06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B01225ACE0000FBFE88 /* CollectionVC.swift */; };
-		06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B13225AFBAF00FBFE88 /* CellText.swift */; };
+		06349B14225AFBAF00FBFE88 /* CellDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06349B13225AFBAF00FBFE88 /* CellDates.swift */; };
 		0669AA14225C49C500E2AE8E /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669AA13225C49C500E2AE8E /* Dates.swift */; };
 		06B84BE622602C23004F44DD /* CollectionViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B84BE522602C23004F44DD /* CollectionViewType.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 		06349AFF225ACE0000FBFE88 /* CellColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellColours.swift; sourceTree = "<group>"; };
 		06349B00225ACE0000FBFE88 /* SetTopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTopVC.swift; sourceTree = "<group>"; };
 		06349B01225ACE0000FBFE88 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
-		06349B13225AFBAF00FBFE88 /* CellText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellText.swift; sourceTree = "<group>"; };
+		06349B13225AFBAF00FBFE88 /* CellDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDates.swift; sourceTree = "<group>"; };
 		0669AA13225C49C500E2AE8E /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		06B84BE522602C23004F44DD /* CollectionViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +176,7 @@
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
 				06B84BE522602C23004F44DD /* CollectionViewType.swift */,
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
-				06349B13225AFBAF00FBFE88 /* CellText.swift */,
+				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
 				06112F41225D88CF002579DF /* MonthNav.swift */,
 				061F85A1225E5271001C28B4 /* ButtonSetup.swift */,
 				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
@@ -255,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06349B0C225ACE0000FBFE88 /* DeviceType.swift in Sources */,
-				06349B14225AFBAF00FBFE88 /* CellText.swift in Sources */,
+				06349B14225AFBAF00FBFE88 /* CellDates.swift in Sources */,
 				06349B11225ACE0000FBFE88 /* SetTopVC.swift in Sources */,
 				06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */,
 				06349B0E225ACE0000FBFE88 /* Present&Reload.swift in Sources */,

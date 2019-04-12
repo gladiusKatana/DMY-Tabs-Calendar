@@ -3,6 +3,8 @@
 
 import UIKit
 
+var cell = CustomCell()
+
 var globalKeyWindow = UIApplication.shared.keyWindow!
 
 var navController: UINavigationController? = UINavigationController()

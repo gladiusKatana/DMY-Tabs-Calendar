@@ -19,7 +19,7 @@ extension CollectionVC {
     func setupNavBarButtons(_ withCustomColour: UIColor?, atIndex: Int?) {
         let navSelectorForDaysVC = #selector(buttonWrapperMethodforDaysVC)
         let navSelectorForMonthsVC = #selector(ButtonWrapperMethodforMonthsVC)
-        let navSelectorForReloading = #selector(reloadCollectionView)
+        let navSelectorForReloading = #selector(reloadCV)
         let daysButton = setupButton(selector: navSelectorForDaysVC, title: "timetableImage")
         let monthsButton = setupButton(selector: navSelectorForMonthsVC, title: "calendarImage")
         let reloadButton = setupButton(selector: navSelectorForReloading, title: "reloadButton")

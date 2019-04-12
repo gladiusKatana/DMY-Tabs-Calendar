@@ -6,7 +6,6 @@ import UIKit
 extension CollectionVC {
     
     @objc func incrementMonth() {                                               //print("incrementing month")
-        
         var someDayNextMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
         if dayInt <= 15 {
             someDayNextMonth = currentDate + TimeInterval(86400 * 35)
@@ -20,7 +19,6 @@ extension CollectionVC {
     
     
     @objc func decrementMonth() {                                               //print("decrementing month")
-        
         var someDayLastMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
         if dayInt <= 15 {
             someDayLastMonth = currentDate - TimeInterval(86400 * 16)
@@ -34,7 +32,6 @@ extension CollectionVC {
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
-        
         if getMonthStringFrom(inputDate) == getMonthStringFrom(Date()) {
             currentDate = Date()
         }
@@ -46,7 +43,8 @@ extension CollectionVC {
         processCurrentDate()                                                   
         
         setupViewTitle("\(monthString) \(year)\n", numLines: 1, alignment: .left)
-        reloadCollectionView()
+        
+        reloadCV()
     }
     
     /*func showDateForDebugging(_ inputDate: Date) {

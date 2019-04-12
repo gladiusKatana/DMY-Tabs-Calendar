@@ -1,59 +1,51 @@
 //  Present&Reload.swift
 //  DMY-Tabs-Calendar  ∙  1st commit Apr. 07, 2019  ∙  Created by Garth Snyder a.k.a. gladiusKatana ⚔️
 
-import UIKit
+import UIKit;   import UserNotifications
 
 extension CollectionVC {
     
-    @objc func reloadAfterPreparingVCAndPossiblyPresentingItAgain(vc: CollectionVC) {
-        
-        if previousOrientation == "landscape" && currentOrientation == "portrait"
-            || willPresentVCAgainBecauseAppJustEnteredForeground {
-            rePresentedVCFromButton = false
-            //print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
-            
-            setupTitleAndPresentViewController(vc: vc) { () -> () in
-                previousOrientation = currentOrientation
-                reloadCV(after: 0.02)
-            }
-        } else {
-            previousOrientation = currentOrientation
-            reloadCollectionView()  // should it have a time delay, as in the above completion block? (will test over time, with different devices)
-            //reloadCV(after: 0.02)
+    func setupNotificationForStatusBarHeightChange() {                                                   
+        if phones.contains(modelName) {
+            let center = UNUserNotificationCenter.current()
+            center.removeAllDeliveredNotifications()                //to remove all delivered notifications
+            center.removeAllPendingNotificationRequests()           //to remove all pending notifications which are not delivered yet but scheduled.
+            NotificationCenter.default.addObserver(self, selector: #selector(reloadCV),
+                                                   name: UIApplication.willChangeStatusBarFrameNotification, object: nil)
         }
     }
     
+    func reloadWithDelay(after timeDelay: Double) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeDelay) {
+            self.reloadCV()
+        }
+    }
+    
+    @objc func reloadCV() { print("\n↺")
+        self.collectionView.reloadData()
+    }
+    
+    
     func gotoView(vc: CollectionVC) {                                                               //print("\nshowing vc \(vc)")
-        if currentTopVC != vc {
-            checkOrientation()
-            
-            setupTitleAndPresentViewController(vc: vc) { () -> () in
-                if currentOrientation == "landscape" {                                              //print("pushed button when in landscape")
-                    reloadCV(after: 0.02)
-                }
-                //else {print("just did goto from portrait")}
-            }
-        } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
-    }
-    
-    func setupTitleAndPresentViewController(vc: CollectionVC, completion: () -> ()) {               //print("\ndismissing/presenting") // vc: \(vc)
-        setupAndPresent(vc: vc)
-        completion()
-    }
-    
-    func setupAndPresent(vc: CollectionVC) {
-        setupViewTitle("", numLines: 1, alignment: .left)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.dismissNavController {
+        if currentTopVC != vc {
+            
+            if currentOrientation == "landscape" {
+                setupTitleAndPresentViewController(vc: vc) { () -> () in
+                    reloadWithDelay(after: 0.02)
+                }
+            }
+            else {
+                setupViewTitle("", numLines: 1, alignment: .left)
+                navController?.dismiss(animated: false, completion: nil)
                 let newVC = UINavigationController(rootViewController: vc)
                 navController?.present(newVC, animated: false, completion: nil)
             }
-        }
-    }
-    
-    func dismissNavController(completion: @escaping () -> ()) {
-        navController?.dismiss(animated: false, completion: nil)
-        completion()
+            
+        } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
     }
 }
+
+
+
+

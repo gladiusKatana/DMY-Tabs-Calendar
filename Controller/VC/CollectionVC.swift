@@ -26,6 +26,7 @@ class CollectionVC: UICollectionViewController {
     }
     
     override func viewDidLoad() {
+        collectionView.isPrefetchingEnabled = false
         collectionView.backgroundColor = navyBlue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.reuseIdentifier)
         collectionView.bounces = false
@@ -34,19 +35,29 @@ class CollectionVC: UICollectionViewController {
         print(substringWithAppends(input: navBarTitle, preceding: "\n💾view ", following:  " loaded"))
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setTopViewController()
-        if rePresentedVCFromButton {
-            print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
-        }
-        setupNavBarButtons(graySeven, atIndex: colourIndex)
+    override func viewWillAppear(_ animated: Bool) {
         if collectionViewType == .days {
             setupViewTitle("\(monthString) \(year)", numLines: 1, alignment: .left)
             setupMonthControlButtons()
         }
-        else {
+        else if collectionViewType == .months {
+            currentDate = Date()
+            processCurrentDate()
             setupViewTitle("\(year)", numLines: 1, alignment: .left)
         }
+        else {
+            print("yearly view controller appeared, it may not be set up yet/")
+        }
+        if rePresentedVCFromButton {
+            rePresentedVCFromButton = false
+            reloadCV()                      //; print("+")
+            print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
+        } //above method called early (before actually appears) to print on first appearance + avoid an additional reset of rePresentedVCFromButton
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setTopViewController()
+        setupNavBarButtons(graySeven, atIndex: colourIndex)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,7 +66,6 @@ class CollectionVC: UICollectionViewController {
         
         setCellColours(cell: cell, indexPath: indexPath)
         setCellText(cell: cell, indexPath: indexPath)
-        //print(indexPath)
         return cell
     }
 }

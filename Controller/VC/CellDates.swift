@@ -20,6 +20,9 @@ extension CollectionVC {
         if getMonthStringFrom(currentDate) == getMonthStringFrom(Date()) && row == todayCellRow && column == todayCellColumn {
             cell.backgroundColor = platinumLite
         }
+        else {
+            cell.backgroundColor = cellDefaultColour
+        }
         
         let daysAhead = 86400 * (column - todayCellColumn + 7 * (row - todayCellRow))
         cell.cellDate = currentDate + TimeInterval(daysAhead)
@@ -32,7 +35,7 @@ extension CollectionVC {
             cell.titleLabel.text = "\(dayIntForDisplay)"
         }
         
-        if getMonthStringFrom(cell.cellDate) == getMonthStringFrom(currentDate) {
+        if getMonthStringFrom(cell.cellDate) == getMonthStringFrom(currentDate) { 
             cell.titleLabel.textColor = platinum
         }
         else {
@@ -43,16 +46,16 @@ extension CollectionVC {
     
     
     func setupMonthlyCells (cell: CustomCell, column: Int, row: Int) {
-        
         let monthIndex = column * 3 + row
         var monthCellDate = Date()
         
         if row == thisMonthCellRow && column == thisMonthCellColumn {
+            cell.cellDate = Date()
             cell.backgroundColor = platinumLite
-            monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: dayInt)
         }
         else {
             monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
+            cell.backgroundColor = cellDefaultColour
         }
         
         cell.cellDate = monthCellDate

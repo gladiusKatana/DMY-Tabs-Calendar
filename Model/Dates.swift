@@ -3,7 +3,7 @@
 
 import UIKit
 
-func processCurrentDate() {
+func processCurrentDate() { 
     (weekday, monthString, dayInt, year) = displayDate(currentDate)
     
     todayCellRow = dayInt / 7 + 1

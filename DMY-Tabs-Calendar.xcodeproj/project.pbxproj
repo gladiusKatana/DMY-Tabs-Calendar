@@ -163,6 +163,8 @@
 		06349AFA225ACE0000FBFE88 /* Controller(Navigation) */ = {
 			isa = PBXGroup;
 			children = (
+				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
+				061F85A1225E5271001C28B4 /* ButtonSetup.swift */,
 				06349AFB225ACE0000FBFE88 /* NavBarSetup.swift */,
 				06349AFD225ACE0000FBFE88 /* Reload.swift */,
 				06349AFC225ACE0000FBFE88 /* Present&Reload.swift */,
@@ -178,8 +180,6 @@
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
 				06112F41225D88CF002579DF /* MonthNav.swift */,
-				061F85A1225E5271001C28B4 /* ButtonSetup.swift */,
-				06349B00225ACE0000FBFE88 /* SetTopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -19,7 +19,6 @@ func createDate(_ year: Int, monthInt: Int, dayInt: Int) -> Date {
     formatter.dateFormat = "yyyy/MM/dd HH:mm"
     guard let date = formatter.date(from: "\(year)/\(monthInt)/\(dayInt) 00:00") else {
         print("could not create date with this input, returning current date instead")
-//        pryntDate
         return Date()
     }
     return date
@@ -28,8 +27,7 @@ func createDate(_ year: Int, monthInt: Int, dayInt: Int) -> Date {
 
 func formalDateString(_ date: Date, comment: String) -> String {
     let (wkday, monString, dayI, yr) = displayDate(date)
-    //return "\(comment) \(wkday), \(monString) \(dayI), \(yr)"
-    return "\(comment) \(monString) \(dayI)"                     // version for testing
+    return "\(comment) \(wkday), \(monString) \(dayI), \(yr)"
 }
 
 

@@ -55,8 +55,8 @@ extension CollectionVC {
             monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
         }
         
-        cell.titleLabel.text = formalDateString(monthCellDate, comment: "")//months[monthIndex]
-        
+        cell.cellDate = monthCellDate
+        cell.titleLabel.text = months[monthIndex]
     }
 }
 

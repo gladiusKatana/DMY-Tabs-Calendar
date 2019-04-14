@@ -23,6 +23,12 @@ extension CollectionVC {
             reloadCV()              // should it have a time delay, as in the above completion block? (will test over time, with different devices)
             //reloadWithDelay(after: 0.02)
         }
+        
+        if collectionViewType == .days {
+            monthButtonLeft.removeFromSuperview()
+            monthButtonRight.removeFromSuperview()
+            currentTopVC.setupMonthControlButtons()
+        }
     }
     
     

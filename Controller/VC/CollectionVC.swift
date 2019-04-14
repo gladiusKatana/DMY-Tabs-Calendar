@@ -37,6 +37,8 @@ class CollectionVC: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         if collectionViewType == .days {
             setupViewTitle("\(monthString) \(year)", numLines: 1, alignment: .left)
+            monthButtonLeft.removeFromSuperview()
+            monthButtonRight.removeFromSuperview()
             setupMonthControlButtons()
         }
         else if collectionViewType == .months {

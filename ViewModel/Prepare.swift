@@ -36,17 +36,13 @@ extension CCVFlowLayout {
         
         switch cellDimensionsMode {
             
-        case .widthAndHeightHardcoded:
-            cellWd = cellWidth!;            cellHt = cellHeight!
+        case .widthAndHeightHardcoded:  cellWd = cellWidth!         ; cellHt = cellHeight!
             
-        case .heightHardcoded:
-            cellWd = autofitWidth;          cellHt = cellHeight!
+        case .widthHardcoded:           cellWd = cellWidth!         ; cellHt = autoFitHeight * autoFitHScale!
             
-        case .widthHardcoded:
-            cellWd = cellWidth!;            cellHt = autoFitHeight
+        case .heightHardcoded:          cellWd = autofitWidth * autoFitWScale!   ; cellHt = cellHeight!
             
-        case .neitherHardcoded:
-            cellWd = autofitWidth;          cellHt = autoFitHeight
+        case .neitherHardcoded:         cellWd = autofitWidth * autoFitWScale!   ; cellHt = autoFitHeight * autoFitHScale!
         }
         
         resetDimensionIfSquareCellsOn()

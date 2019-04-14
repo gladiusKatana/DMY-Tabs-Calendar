@@ -40,7 +40,7 @@ import UIKit
         window?.rootViewController = navController                          //; print("VCs*: \(String(describing: nav Controller?.viewControllers))")
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            daysVC.setupAndPresent(vc: daysVC)        // just need a uiviewcontroller (any of them) to call this func.
+            daysVC.setupAndPresent(vc: daysVC)  // just need a uiviewcontroller (any of them) to call this func.
         }
         
         return true

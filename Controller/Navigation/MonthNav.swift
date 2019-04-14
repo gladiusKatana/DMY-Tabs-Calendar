@@ -13,7 +13,6 @@ extension CollectionVC {
         else {
             someDayNextMonth = currentDate + TimeInterval(86400 * 16)
         }                                                                       //; showDateForDebugging(someDayNextMonth)
-
         resetCurrentDateAndReload(someDayNextMonth)
     }
     
@@ -26,7 +25,6 @@ extension CollectionVC {
         else {
             someDayLastMonth = currentDate - TimeInterval(86400 * 35)
         }                                                                       //; showDateForDebugging(someDayLastMonth)
-        
         resetCurrentDateAndReload(someDayLastMonth)
     }
 
@@ -40,10 +38,8 @@ extension CollectionVC {
             currentDate = inputDate - TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
         }
         
-        processCurrentDate()                                                   
-        
+        processCurrentDate()
         setupViewTitle("\(monthString) \(year)\n", numLines: 1, alignment: .left)
-        
         reloadCV()
     }
     

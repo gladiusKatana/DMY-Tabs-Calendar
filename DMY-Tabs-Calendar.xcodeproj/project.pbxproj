@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		061025642260FC540004F464 /* Selecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061025632260FC530004F464 /* Selecting.swift */; };
 		06112F42225D88CF002579DF /* MonthNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06112F41225D88CF002579DF /* MonthNav.swift */; };
+		061BED41226399A1000CFF4F /* Load&Appear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061BED40226399A1000CFF4F /* Load&Appear.swift */; };
 		061F85A2225E5271001C28B4 /* ButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A1225E5271001C28B4 /* ButtonSetup.swift */; };
 		061F85A4225E6EED001C28B4 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F85A3225E6EED001C28B4 /* CalendarVars.swift */; };
 		06349AD7225ACCBB00FBFE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06349AD6225ACCBB00FBFE88 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		061025632260FC530004F464 /* Selecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selecting.swift; sourceTree = "<group>"; };
 		06112F41225D88CF002579DF /* MonthNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNav.swift; sourceTree = "<group>"; };
+		061BED40226399A1000CFF4F /* Load&Appear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Load&Appear.swift"; sourceTree = "<group>"; };
 		061F85A1225E5271001C28B4 /* ButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetup.swift; sourceTree = "<group>"; };
 		061F85A3225E6EED001C28B4 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 		06349ACC225ACCB900FBFE88 /* DMY-Tabs-Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DMY-Tabs-Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				06349B01225ACE0000FBFE88 /* CollectionVC.swift */,
+				061BED40226399A1000CFF4F /* Load&Appear.swift */,
 				06B84BE522602C23004F44DD /* CollectionViewType.swift */,
 				06349AFF225ACE0000FBFE88 /* CellColours.swift */,
 				06349B13225AFBAF00FBFE88 /* CellDates.swift */,
@@ -279,6 +282,7 @@
 				06349B12225ACE0000FBFE88 /* CollectionVC.swift in Sources */,
 				06349B0E225ACE0000FBFE88 /* ExtraPresent&Reload.swift in Sources */,
 				06349AE7225ACDCF00FBFE88 /* AppDelegate.swift in Sources */,
+				061BED41226399A1000CFF4F /* Load&Appear.swift in Sources */,
 				06349B06225ACE0000FBFE88 /* ZIndex.swift in Sources */,
 				06112F42225D88CF002579DF /* MonthNav.swift in Sources */,
 				061025642260FC540004F464 /* Selecting.swift in Sources */,

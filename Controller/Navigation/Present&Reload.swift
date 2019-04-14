@@ -28,7 +28,6 @@ extension CollectionVC {
         } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
     }
     
-    
     func reloadWithDelay(after timeDelay: Double) {
         DispatchQueue.main.asyncAfter(deadline: .now() + timeDelay) {
             self.reloadCV()
@@ -38,7 +37,6 @@ extension CollectionVC {
     @objc func reloadCV() {             //print("\n↺")
         self.collectionView.reloadData()
     }
-    
 
     func setupNotificationForStatusBarHeightChange() {
         if phones.contains(modelName) {

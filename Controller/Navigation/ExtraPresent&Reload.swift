@@ -5,7 +5,6 @@ import UIKit
 
 extension CollectionVC {
     
-    
     @objc func reloadAfterPreparingVCAndPossiblyPresentingItAgain(vc: CollectionVC) {
         
         if previousOrientation == "landscape" && currentOrientation == "portrait"
@@ -29,7 +28,6 @@ extension CollectionVC {
             currentTopVC.setupMonthControlButtons()
         }
     }
-    
     
     func setupTitleAndPresentViewController(vc: CollectionVC, completion: () -> ()) {               //print("\ndismissing/presenting") // vc: \(vc)
         setupAndPresent(vc: vc)

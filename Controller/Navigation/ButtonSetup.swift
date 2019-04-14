@@ -38,5 +38,4 @@ extension CollectionVC {
         monthButtonLeft.removeFromSuperview()
         monthButtonRight.removeFromSuperview()
     }
-    
 }

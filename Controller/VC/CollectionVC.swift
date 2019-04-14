@@ -37,9 +37,6 @@ class CollectionVC: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         if collectionViewType == .days {
             setupViewTitle("\(monthString) \(year)", numLines: 1, alignment: .left)
-            monthButtonLeft.removeFromSuperview()
-            monthButtonRight.removeFromSuperview()
-            setupMonthControlButtons()
         }
         else if collectionViewType == .months {
             currentDate = Date()
@@ -59,6 +56,11 @@ class CollectionVC: UICollectionViewController {
     override func viewDidAppear(_ animated: Bool) {
         setTopViewController()
         setupNavBarButtons(graySeven, atIndex: colourIndex)
+        
+        if collectionViewType == .days {
+            removeMonthControlButtons()
+            setupMonthControlButtons()
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

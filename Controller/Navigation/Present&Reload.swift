@@ -16,6 +16,9 @@ extension CollectionVC {
                 }
             
 //            } else {
+            
+//                //setupAndPresent(vc: vc)
+            
 //                setupViewTitle("", numLines: 1, alignment: .left)
 //                navController?.dismiss(animated: false, completion: nil)
 //                let newVC = UINavigationController(rootViewController: vc)
@@ -32,7 +35,7 @@ extension CollectionVC {
         }
     }
     
-    @objc func reloadCV() { print("\n↺")
+    @objc func reloadCV() {             //print("\n↺")
         self.collectionView.reloadData()
     }
     

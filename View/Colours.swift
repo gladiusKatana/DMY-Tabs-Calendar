@@ -14,6 +14,7 @@ var grayTwo = UIColor.rgb(0, g: 0, b: 0, a: 0.2)
 var graySeven = UIColor.rgb(0, g: 0, b: 0, a: 0.7)
 
 var icyBlue = UIColor.rgb(150, g: 180, b: 220, a: 1)
+var halfIcyBlue = UIColor.rgb(150, g: 180, b: 220, a: 0.5)
 var navyBlue = UIColor.rgb(0, g: 36, b: 82, a: 1)
 
 var platinum = UIColor.rgb(214, g: 214, b: 214, a: 1)

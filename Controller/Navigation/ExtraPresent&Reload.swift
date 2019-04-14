@@ -25,8 +25,7 @@ extension CollectionVC {
         }
         
         if collectionViewType == .days {
-            monthButtonLeft.removeFromSuperview()
-            monthButtonRight.removeFromSuperview()
+            removeMonthControlButtons()
             currentTopVC.setupMonthControlButtons()
         }
     }

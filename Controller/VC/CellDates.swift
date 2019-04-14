@@ -17,7 +17,8 @@ extension CollectionVC {
     func setupDailyCells (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
         
-        if getMonthStringFrom(currentDate) == getMonthStringFrom(Date()) && row == todayCellRow && column == todayCellColumn {
+        if getMonthStringFrom(currentDate) == getMonthStringFrom(Date()) && getYearFrom(currentDate) == getYearFrom(Date())
+            && row == todayCellRow && column == todayCellColumn {
             cell.backgroundColor = platinumLite
         }
         else {

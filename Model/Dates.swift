@@ -59,3 +59,9 @@ func getDayFrom(_ date: Date) -> Int {
     let day = Int(dateFormatter.string(from: date))
     return day!
 }
+
+func getYearFrom(_ date: Date) -> Int {
+    let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "YYYY"
+    let year = Int(dateFormatter.string(from: date))
+    return year!
+}

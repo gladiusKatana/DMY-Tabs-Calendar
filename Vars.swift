@@ -14,7 +14,7 @@ var cellGap = CGFloat(0)          // if nonzero, do NOT make this smaller than: 
 
 
 //--------------------------------------------------------------------------------------------
-var daysLayout = CCVFlowLayout(rows: 7, cols: 6, lockedHeaderRows: 0, lockedHeaderSections: 1,
+var daysLayout = CCVFlowLayout(rows: 7, cols: 7, lockedHeaderRows: 0, lockedHeaderSections: 1,
                                 cellWidth: nil, cellHeight: nil, hSpace: cellGap, vSpace: cellGap,
                                 loadsHorizontally: true,                      // note, if loadsHorizontally is true, 'rows' look like columns
                                 squareCellMode: .autoSquareHeightFromWidth)

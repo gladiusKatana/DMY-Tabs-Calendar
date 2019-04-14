@@ -32,7 +32,7 @@ extension CollectionVC {
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
-        if getMonthStringFrom(inputDate) == getMonthStringFrom(Date()) {
+        if getMonthStringFrom(inputDate) == getMonthStringFrom(Date()) && getYearFrom(inputDate) == getYearFrom(Date()) {
             currentDate = Date()
         }
         else {

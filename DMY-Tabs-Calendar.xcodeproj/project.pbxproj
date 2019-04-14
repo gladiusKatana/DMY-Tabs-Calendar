@@ -438,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX84NTAHJ6;
 				INFOPLIST_FILE = "DMY-Tabs-Calendar/Info.plist";
@@ -448,6 +449,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.DMY-Tabs-Calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX84NTAHJ6;
 				INFOPLIST_FILE = "DMY-Tabs-Calendar/Info.plist";
@@ -467,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.DMY-Tabs-Calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

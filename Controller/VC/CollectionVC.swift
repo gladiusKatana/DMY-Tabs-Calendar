@@ -26,7 +26,6 @@ class CollectionVC: UICollectionViewController {
     }
     
     override func viewDidLoad() {
-        collectionView.isPrefetchingEnabled = false
         collectionView.backgroundColor = navyBlue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.reuseIdentifier)
         collectionView.bounces = false

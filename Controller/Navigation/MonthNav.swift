@@ -5,15 +5,7 @@ import UIKit
 
 extension CollectionVC {
     
-    @objc func incrementMonth() {
-//        var someDayNextMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
-//        if dayInt <= 15 {
-//            someDayNextMonth = currentDate + TimeInterval(86400 * 35)
-//        }
-//        else {
-//            someDayNextMonth = currentDate + TimeInterval(86400 * 16)
-//        }                                                                       //; showDateForDebugging(someDayNextMonth)
-        
+    @objc func incrementMonth() {                                                       //print("incrementing month")
         let currentMonthInt = months.firstIndex(of: monthString)! + 1
         var nextMonth = 0; var thisYearOrNext = year
         
@@ -22,21 +14,14 @@ extension CollectionVC {
             return
         }
         
-        nextMonth = currentMonthInt + 1                                           //; print("incrementing month  current int \(nextMonth)")
+        nextMonth = currentMonthInt + 1
         
         let dayNextMonth = createDate(thisYearOrNext, monthInt: nextMonth, dayInt: 1)
         resetCurrentDateAndReload(dayNextMonth)
     }
     
     
-    @objc func decrementMonth() {                                               //print("decrementing month")
-//        var someDayLastMonth = Date()                                           //; print("\n\n----------day int: \(dayInt)")
-//        if dayInt <= 15 {
-//            someDayLastMonth = currentDate - TimeInterval(86400 * 16)
-//        }
-//        else {
-//            someDayLastMonth = currentDate - TimeInterval(86400 * 35)
-//        }                                                                       //; showDateForDebugging(someDayLastMonth)
+    @objc func decrementMonth() {                                                       //print("decrementing month")
         
         let currentMonthInt = months.firstIndex(of: monthString)! + 1
         var lastMonth = 0; var thisYearOrLast = year
@@ -46,7 +31,7 @@ extension CollectionVC {
             return
         }
         
-        lastMonth = currentMonthInt - 1                                           //; print("incrementing month  current int \(lastMonth)")
+        lastMonth = currentMonthInt - 1
         
         let dayLastMonth = createDate(thisYearOrLast, monthInt: lastMonth, dayInt: 1)
         resetCurrentDateAndReload(dayLastMonth)
@@ -54,20 +39,14 @@ extension CollectionVC {
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
+        
         if monthNameOf(inputDate) == monthNameOf(Date()) && yearOf(inputDate) == yearOf(Date()) {
             currentDate = Date()
         }
-        else {
-            //let daysSinceTheFirstOfTheMonth = dayIntOf(inputDate) - 1
-            currentDate = inputDate //- TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
-        }
+        else {currentDate = inputDate}
         
         processCurrentDate()
         setupViewTitle("\(monthString) \(year)\n", numLines: 1, alignment: .left)
         reloadCV()
     }
-    
-    /*func showDateForDebugging(_ inputDate: Date) {
-        let (wkdy, moStr, dayI, yr) = displayDate(inputDate)   ; print("\nsome day next month: \(wkdy), \(moStr) \(dayI), \(yr)")
-    }*/
 }

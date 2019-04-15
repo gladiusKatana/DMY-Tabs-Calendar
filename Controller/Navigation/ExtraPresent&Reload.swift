@@ -11,7 +11,7 @@ extension CollectionVC {
             || willPresentVCAgainBecauseAppJustEnteredForeground {
             
             rePresentedVCFromButton = false
-            //print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
+//            print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
             
             setupTitleAndPresentViewController(vc: vc) { () -> () in
                 previousOrientation = currentOrientation // * should probably factor out
@@ -19,7 +19,7 @@ extension CollectionVC {
             }
         } else {
             previousOrientation = currentOrientation  // * should probably factor out
-            reloadCV() //reloadWithDelay(after: 0.02) // use time delay, as in above completion block? (will test over time, with different devices)
+            reloadCV() //reloadWithDelay(after: 0.02) // ?use time delay, as in above completion block? (will test over time, with different devices)
         }
         
         if collectionViewType == .days {

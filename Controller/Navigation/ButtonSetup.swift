@@ -8,11 +8,11 @@ extension CollectionVC {
     func setupMonthControlButtons() {
         
         let buttonSize = 50
-        var buttonY = CGFloat(7) * downcastLayout!.cellHeight! + 50
+        let buttonY = CGFloat(7) * downcastLayout!.cellHeight! + CGFloat(50)
         
-        if Double(globalKeyWindow.frame.height) == 768 {
-            buttonY = 857 // = 1024 - 167
-        }
+//        if Double(globalKeyWindow.frame.height) == 768 {
+//            buttonY = 857 // = 1024 - 167
+//        }
         
         monthButtonLeftImage = (UIImage(named: "worra")?.withRenderingMode(.alwaysTemplate))!
         monthButtonLeft = UIButton(frame: CGRect(x: 53,

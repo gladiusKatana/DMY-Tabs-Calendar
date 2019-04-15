@@ -23,4 +23,4 @@ var todayCellRow = 0;       var todayCellColumn = 0
 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-var thisMonthCellIndex = 0
+var currentMonthIndex = 0

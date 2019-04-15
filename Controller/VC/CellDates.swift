@@ -44,7 +44,7 @@ extension CollectionVC {
         
         let monthIndex = row * 3 + column
         
-        if thisMonthCellIndex == row * 3 + column {
+        if currentMonthIndex == row * 3 + column {
             cell.cellDate = Date()
             cell.backgroundColor = platinumLite
         }

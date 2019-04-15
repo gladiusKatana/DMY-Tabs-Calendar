@@ -23,29 +23,6 @@ func createDate(_ year: Int, monthInt: Int, dayInt: Int) -> Date {
 }
 
 
-func formalDateString(_ date: Date, comment: String) -> String {
-    let (wkday, monString, dayI, yr) = displayDate(date)
-    return "\(comment) \(wkday), \(monString) \(dayI), \(yr)"
-}
-
-
-func displayDate(_ inputDate: Date)
-    -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
-{
-    let weekdayFormatter = DateFormatter();     weekdayFormatter.dateFormat = "EEEE"
-    let monthStrFormatter = DateFormatter();    monthStrFormatter.dateFormat = "MMMM"
-    let dayIntFormatter = DateFormatter();      dayIntFormatter.dateFormat = "d"
-    let yearFormatter = DateFormatter();        yearFormatter.dateFormat = "YYYY"
-    
-    let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
-    let monthStr = monthStrFormatter.string(from: inputDate as Date)
-    let dayInt = Int(dayIntFormatter.string(from: inputDate as Date))
-    let year = Int(yearFormatter.string(from: inputDate as Date))
-    
-    return (weekday, monthStr, dayInt!, year!)
-}
-
-
 func monthNameOf(_ date: Date) -> String {                           // below methods basically return same as above one, but selectively
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "MMMM"
     let nameOfMonth = dateFormatter.string(from: date)
@@ -62,4 +39,26 @@ func yearOf(_ date: Date) -> Int {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "YYYY"
     let year = Int(dateFormatter.string(from: date))
     return year!
+}
+
+
+func formalDateString(_ date: Date, comment: String) -> String {
+    let (wkday, monString, dayI, yr) = displayDate(date)
+    return "\(comment) \(wkday), \(monString) \(dayI), \(yr)"
+}
+
+func displayDate(_ inputDate: Date)
+    -> (weekday: String, monthStr: String, dayInt: Int, year: Int)
+{
+    let weekdayFormatter = DateFormatter();     weekdayFormatter.dateFormat = "EEEE"
+    let monthStrFormatter = DateFormatter();    monthStrFormatter.dateFormat = "MMMM"
+    let dayIntFormatter = DateFormatter();      dayIntFormatter.dateFormat = "d"
+    let yearFormatter = DateFormatter();        yearFormatter.dateFormat = "YYYY"
+    
+    let weekday = weekdayFormatter.string(from: inputDate as Date)//.capitalized
+    let monthStr = monthStrFormatter.string(from: inputDate as Date)
+    let dayInt = Int(dayIntFormatter.string(from: inputDate as Date))
+    let year = Int(yearFormatter.string(from: inputDate as Date))
+    
+    return (weekday, monthStr, dayInt!, year!)
 }

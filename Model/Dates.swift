@@ -8,7 +8,6 @@ func processCurrentDate() {
     
     todayCellRow = dayInt / 7 + 1
     todayCellColumn = daysOfTheWeek.firstIndex(of: weekday)!
-    
     thisMonthCellIndex = months.firstIndex(of: monthString)!
 }
 
@@ -47,19 +46,19 @@ func displayDate(_ inputDate: Date)
 }
 
 
-func getMonthStringFrom(_ date: Date) -> String {                           // below methods basically return same as above one, but selectively
+func monthNameOf(_ date: Date) -> String {                           // below methods basically return same as above one, but selectively
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "MMMM"
     let nameOfMonth = dateFormatter.string(from: date)
     return nameOfMonth
 }
 
-func getDayFrom(_ date: Date) -> Int {
+func dayIntOf(_ date: Date) -> Int {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "d"
     let day = Int(dateFormatter.string(from: date))
     return day!
 }
 
-func getYearFrom(_ date: Date) -> Int {
+func yearOf(_ date: Date) -> Int {
     let dateFormatter = DateFormatter();  dateFormatter.dateFormat = "YYYY"
     let year = Int(dateFormatter.string(from: date))
     return year!

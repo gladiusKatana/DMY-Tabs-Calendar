@@ -30,11 +30,11 @@ extension CollectionVC {
 
     
     func resetCurrentDateAndReload(_ inputDate: Date) {
-        if getMonthStringFrom(inputDate) == getMonthStringFrom(Date()) && getYearFrom(inputDate) == getYearFrom(Date()) {
+        if monthNameOf(inputDate) == monthNameOf(Date()) && yearOf(inputDate) == yearOf(Date()) {
             currentDate = Date()
         }
         else {
-            let daysSinceTheFirstOfTheMonth = getDayFrom(inputDate) - 1
+            let daysSinceTheFirstOfTheMonth = dayIntOf(inputDate) - 1
             currentDate = inputDate - TimeInterval(86400 * daysSinceTheFirstOfTheMonth)
         }
         

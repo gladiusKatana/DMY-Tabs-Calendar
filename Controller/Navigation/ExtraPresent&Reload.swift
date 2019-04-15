@@ -5,22 +5,21 @@ import UIKit
 
 extension CollectionVC {
     
-    @objc func reloadAfterPreparingVCAndPossiblyPresentingItAgain(vc: CollectionVC) {
+    @objc func reloadAfterVCIsPossiblyPresentedAgainFromCallToPrepare(vc: CollectionVC) {
         
         if previousOrientation == "landscape" && currentOrientation == "portrait"
             || willPresentVCAgainBecauseAppJustEnteredForeground {
             
             rePresentedVCFromButton = false
-            print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
-
+            //print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
+            
             setupTitleAndPresentViewController(vc: vc) { () -> () in
-                previousOrientation = currentOrientation            // * should probably factor out
+                previousOrientation = currentOrientation // * should probably factor out
                 reloadWithDelay(after: 0.02)
             }
         } else {
-            previousOrientation = currentOrientation                // * should probably factor out
-            reloadCV()              // should it have a time delay, as in the above completion block? (will test over time, with different devices)
-            //reloadWithDelay(after: 0.02)
+            previousOrientation = currentOrientation  // * should probably factor out
+            reloadCV() //reloadWithDelay(after: 0.02) // use time delay, as in above completion block? (will test over time, with different devices)
         }
         
         if collectionViewType == .days {

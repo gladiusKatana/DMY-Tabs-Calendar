@@ -4,26 +4,26 @@
 import UIKit;   import UserNotifications
 
 extension CollectionVC {
-
-    func gotoView(vc: CollectionVC) {                                                               //print("\nshowing vc \(vc)")
+    
+    func gotoView(vc: CollectionVC) {                                       //print("\nshowing vc \(vc)")
         
         if currentTopVC != vc {
             
 //            if currentOrientation == "landscape" {
             
-                setupTitleAndPresentViewController(vc: vc) { () -> () in
-                    reloadWithDelay(after: 0.02)
-                }
+            setupTitleAndPresentViewController(vc: vc) { () -> () in
+                reloadWithDelay(after: 0.02)
+            }
             
-//            } else {
-            
-//                //setupAndPresent(vc: vc)
-            
-//                setupViewTitle("", numLines: 1, alignment: .left)
-//                navController?.dismiss(animated: false, completion: nil)
-//                let newVC = UINavigationController(rootViewController: vc)
-//                navController?.present(newVC, animated: false, completion: nil)
-//            }
+//        } else {
+//            
+//            //setupAndPresent(vc: vc)
+//
+//            setupViewTitle("", numLines: 1, alignment: .left)
+//            navController?.dismiss(animated: false, completion: nil)
+//            let newVC = UINavigationController(rootViewController: vc)
+//            navController?.present(newVC, animated: false, completion: nil)
+//        }
             
         } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
     }
@@ -37,7 +37,7 @@ extension CollectionVC {
     @objc func reloadCV() {             //print("\n↺")
         self.collectionView.reloadData()
     }
-
+    
     func setupNotificationForStatusBarHeightChange() {
         if phones.contains(modelName) {
             let center = UNUserNotificationCenter.current()

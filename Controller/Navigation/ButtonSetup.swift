@@ -10,25 +10,22 @@ extension CollectionVC {
         let buttonSize = 50
         let buttonY = CGFloat(7) * downcastLayout!.cellHeight! + CGFloat(50)
         
-//        if Double(globalKeyWindow.frame.height) == 768 {
-//            buttonY = 857 // = 1024 - 167
-//        }
         
-        monthButtonLeftImage = (UIImage(named: "worra")?.withRenderingMode(.alwaysTemplate))!
         monthButtonLeft = UIButton(frame: CGRect(x: 53,
                                                  y: Int(buttonY), width: buttonSize, height: buttonSize))
-        
+        monthButtonLeftImage = (UIImage(named: "worra")?.withRenderingMode(.alwaysTemplate))!
         monthButtonLeft.setImage(monthButtonLeftImage, for: UIControl.State())
         monthButtonLeft.tintColor = halfIcyBlue
         monthButtonLeft.addTarget(self, action: #selector(decrementMonth), for: UIControl.Event.touchUpInside)
         
-        monthButtonRightImage = (UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate))!
+        
         monthButtonRight = UIButton(frame: CGRect(x: Int(globalKeyWindow.frame.width) - 53 - buttonSize,
                                                   y: Int(buttonY), width: buttonSize, height: buttonSize))
-        
+        monthButtonRightImage = (UIImage(named: "arrow")?.withRenderingMode(.alwaysTemplate))!
         monthButtonRight.setImage(monthButtonRightImage, for: UIControl.State())
         monthButtonRight.tintColor = halfIcyBlue
         monthButtonRight.addTarget(self, action: #selector(incrementMonth), for: UIControl.Event.touchUpInside)
+        
         
         collectionView?.addSubview(monthButtonLeft)
         collectionView?.addSubview(monthButtonRight)

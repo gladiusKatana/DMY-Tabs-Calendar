@@ -6,25 +6,26 @@ import UIKit
 extension CCVFlowLayout {
     
     override func prepare() {
+        
         calculateSizes()
-        cellWidth = cellWd;                     cellHeight = cellHt
-        widthPlusSpace = cellWidth! + hSpace;   heightPlusSpace = cellHeight! + vSpace
+        cellWidth = cellWd;     widthPlusSpace = cellWidth! + hSpace
+        cellHeight = cellHt;    heightPlusSpace = cellHeight! + vSpace
         
         var statusBarDelta = 0.0
-        if UIApplication.shared.statusBarFrame.size.height > 20 {                           //print("Δ")
+        if UIApplication.shared.statusBarFrame.size.height > 20 {
             statusBarDelta = Double(UIApplication.shared.statusBarFrame.size.height - 20)
         }
         
-        yOffSet = collectionView!.contentOffset.y + CGFloat(navBarHeight + statusBarHeight - statusBarDelta) //print("yo: \(yOffSet)")
+        yOffSet = collectionView!.contentOffset.y + CGFloat(navBarHeight + statusBarHeight - statusBarDelta)    //print("yo: \(yOffSet)")
         xOffSet = collectionView!.contentOffset.x
         
         checkOrientation()                          //print(substringWithAppends(input: currentTopVC.navBarTitle, preceding: "---------------------prepare cv  ", following:  "  cell width: \(cellWidth!)  nav bar height: \(navBarHeight)"))
         
         if previousOrientation != currentOrientation  {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
-                currentTopVC.reloadAfterPreparingVCAndPossiblyPresentingItAgain(vc: currentTopVC)
+                currentTopVC.reloadAfterVCIsPossiblyPresentedAgainFromCallToPrepare(vc: currentTopVC)
             }
-        }//else {print("will not call "reload-after-preparing-vc-and-possibly-presenting-it-again"")}
+        }
     }
     
     func calculateSizes() {                                                                 //print("resizing cells")

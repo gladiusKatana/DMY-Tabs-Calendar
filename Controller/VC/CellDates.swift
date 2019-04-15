@@ -6,13 +6,12 @@ import UIKit
 extension CollectionVC {
     
     func setCellText (cell: CustomCell, indexPath: IndexPath) {
-        let column = indexPath.item ; let row = indexPath.section // since loadsHorizontally should be true for a (typical) calendar collection vc
-        cell.titleLabel.textColor = platinum
-        
+        let row = indexPath.section ; let column = indexPath.item // since loadsHorizontally should be true for a (typical) calendar vc...
+        cell.titleLabel.textColor = platinum                      // ...(cells 'flow' in the prevailing horizontal direction)
+        //
         if collectionViewType == .days {setupDailyCells(cell: cell, column: column, row: row)}
         if collectionViewType == .months {setupMonthlyCells(cell: cell, column: column, row: row)}
     }
-    
     
     func setupDailyCells (cell: CustomCell, column: Int, row: Int) {
         let dayLabels = ["S", "M", "T", "W", "T", "F", "S"]
@@ -45,22 +44,19 @@ extension CollectionVC {
         }
     }
     
-    
     func setupMonthlyCells (cell: CustomCell, column: Int, row: Int) {
-        let monthIndex = column * 3 + row
-        var monthCellDate = Date()
+        let monthIndex = row * 3 + column
         
-        if row == thisMonthCellRow && column == thisMonthCellColumn {
+        if thisMonthCellIndex == row * 3 + column {
             cell.cellDate = Date()
             cell.backgroundColor = platinumLite
         }
         else {
-            monthCellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
+            cell.cellDate = createDate(year, monthInt: monthIndex + 1, dayInt: 1)
             cell.backgroundColor = cellDefaultColour
         }
         
-        cell.cellDate = monthCellDate
-        cell.titleLabel.text = months[monthIndex]
+        cell.titleLabel.text = months[monthIndex]  
     }
 }
 

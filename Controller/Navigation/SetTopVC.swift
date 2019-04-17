@@ -4,33 +4,27 @@
 import UIKit
 
 extension UIViewController {
-    
+
     func setTopViewController() {
-        
-        if let viewControllers = self.navigationController?.viewControllers {// despite the s, should only contain 1 view controller...
-            
-            //print("view controllers: \(viewControllers)")
-            
-            guard viewControllers.count == 1 else {                          // ... this 1 view controller is the one showing
-                
-                print("\n\nnavigation controller, somehow, contains more than one view controller at once  ... vc count: \(viewControllers.count)   vcs: \(viewControllers)'\n\n")
-                return
-            }
-            
-            if let customVC = viewControllers[0] as? CollectionVC {
-                currentTopVC = customVC
-            }
-                
-            else {print("...could not cast vc within check of vc subclass")}
+
+        guard let viewControllers = self.navigationController?.viewControllers else { // despite the s, should only contain 1 view controller...
+            print("...could not bind view controller array")
+            return
         }
+
+        //print("view controllers: \(viewControllers)")
+
+        guard viewControllers.count == 1 else {
+            print("\n\nnavigation controller, somehow, contains more than one view controller at once  ... \n\nvc count: \(viewControllers.count)   \n\nvcs: \(viewControllers)'\n\n")
+            return
+        }
+
+        guard let customVC = viewControllers[0] as? CollectionVC else {
+            print("...could not downcast vc")
+            return
+        }
+
+        currentTopVC = customVC
     }
+
 }
-
-
-
-
-
-
-
-
-

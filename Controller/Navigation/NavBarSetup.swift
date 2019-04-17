@@ -18,14 +18,17 @@ extension CollectionVC {
     
     func setupNavBarButtons(_ withCustomColour: UIColor?, atIndex: Int?) {
         let navSelectorForDaysVC = #selector(buttonWrapperMethodforDaysVC)
-        let navSelectorForMonthsVC = #selector(ButtonWrapperMethodforMonthsVC)
+        let navSelectorForMonthsVC = #selector(buttonWrapperMethodforMonthsVC)
+        let navSelectorForYearsVC = #selector(buttonWrapperMethodforYearsVC)
         let navSelectorForReloading = #selector(reloadCV)
+        
         let daysButton = setupButton(selector: navSelectorForDaysVC, title: "timetableImage")
         let monthsButton = setupButton(selector: navSelectorForMonthsVC, title: "calendarImage")
+        let yearsButton = setupButton(selector: navSelectorForYearsVC, title: "reloadButton")
         let reloadButton = setupButton(selector: navSelectorForReloading, title: "reloadButton")
-        navigationItem.rightBarButtonItems = [monthsButton, daysButton, reloadButton]
+        navigationItem.rightBarButtonItems = [yearsButton, monthsButton, daysButton, reloadButton]
         
-        var barButtonColours = [grayTwo, grayTwo, .clear]
+        var barButtonColours = [graySeven, graySeven, graySeven, .clear]
         
         for button in navigationItem.rightBarButtonItems! {
             if let index = navigationItem.rightBarButtonItems?.firstIndex(of: button) {
@@ -36,7 +39,7 @@ extension CollectionVC {
             if let colourIndex = atIndex {
                 navigationItem.rightBarButtonItems?[colourIndex].tintColor = customColour
             } else {print("<no custom colour index>")}
-        } //else {print("<no custom colour>")}
+        } else {print("<no custom colour>")}
     }
     
     func setupButton(selector: Selector, title: String) -> UIBarButtonItem {
@@ -46,7 +49,8 @@ extension CollectionVC {
     }
     
     @objc func buttonWrapperMethodforDaysVC() {presentViaVCButton(vc: daysVC)}
-    @objc func ButtonWrapperMethodforMonthsVC() {presentViaVCButton(vc: monthsVC)}
+    @objc func buttonWrapperMethodforMonthsVC() {presentViaVCButton(vc: monthsVC)}
+    @objc func buttonWrapperMethodforYearsVC() {presentViaVCButton(vc: yearsVC)}
     
     func presentViaVCButton(vc: CollectionVC) {
         rePresentedVCFromButton = true

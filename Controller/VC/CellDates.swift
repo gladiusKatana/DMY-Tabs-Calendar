@@ -9,6 +9,7 @@ extension CollectionVC {
         let row = indexPath.section ; let column = indexPath.item       // since loadsHorizontally should be true for a (typical) calendar vc
         if collectionViewType == .days {setupDailyCells(cell: cell, column: column, row: row)}
         if collectionViewType == .months {setupMonthlyCells(cell: cell, column: column, row: row)}
+        if collectionViewType == .years {setupYearlyCells(cell: cell, column: column, row: row)}
     }
     
     
@@ -53,6 +54,12 @@ extension CollectionVC {
             cell.backgroundColor = cellDefaultColour
         }
         cell.titleLabel.text = months[monthIndex];     cell.titleLabel.textColor = platinum
+    }
+    
+    
+    func setupYearlyCells (cell: CustomCell, column: Int, row: Int) {
+        
+        cell.titleLabel.text = ":)";     cell.titleLabel.textColor = platinum
     }
 }
 

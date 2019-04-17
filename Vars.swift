@@ -24,15 +24,16 @@ var monthsLayout = CCVFlowLayout(rows: 3, cols: 4, lockedHeaderRows: 0, lockedHe
                                  loadsHorizontally: true,
                                  squareCellMode: .noAutoSquare)
 
-//var yearsLayout = CCVFlowLayout(rows: 5, cols: 24, lockedHeaderRows: 0, lockedHeaderSections: 0,
-//                                 cellWidth: nil, cellHeight: nil,
-//                                 autoFitWScale: 1, autoFitHScale: 1.4,
-//                                 hSpace: cellGap, vSpace: cellGap,
-//                                 loadsHorizontally: true,
-//                                 squareCellMode: .noAutoSquare)
+var yearsLayout = CCVFlowLayout(rows: 5, cols: 24, lockedHeaderRows: 0, lockedHeaderSections: 0,
+                                 cellWidth: nil, cellHeight: nil,
+                                 autoFitWScale: 1, autoFitHScale: 1.4,
+                                 hSpace: cellGap, vSpace: cellGap,
+                                 loadsHorizontally: true,
+                                 squareCellMode: .noAutoSquare)
 
-var daysVC = CollectionVC(type: .days, headerTitle: "Collection View 1", colourIndex: 0, collectionViewLayout: daysLayout)
-var monthsVC = CollectionVC(type: .months, headerTitle: "Collection View 2", colourIndex: 1, collectionViewLayout: monthsLayout)
+var daysVC = CollectionVC(type: .days, headerTitle: ":)", colourIndex: 2, collectionViewLayout: daysLayout)         // header titles get...
+var monthsVC = CollectionVC(type: .months, headerTitle: ":)", colourIndex: 1, collectionViewLayout: monthsLayout)   //...changed promptly
+var yearsVC = CollectionVC(type: .years, headerTitle: ":)", colourIndex: 0, collectionViewLayout: yearsLayout)      //...so they don't matter here
 //--------------------------------------------------------------------------------------------
 
 var currentTopVC : CollectionVC = CollectionVC(type: .days, headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)

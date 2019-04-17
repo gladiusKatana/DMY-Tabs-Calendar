@@ -26,7 +26,10 @@ extension CollectionVC {
             processCurrentDate()
             setupViewTitle("\(year)", numLines: 1, alignment: .left)
         }
-        else {print("yearly view controller appeared, it may not be set up yet/")}//* will set up soon
+
+        else {
+//        print("yearly view controller appeared, it may not be set up yet/") // * will set up soon
+        }
         
         if rePresentedVCFromButton {
             rePresentedVCFromButton = false
@@ -39,7 +42,7 @@ extension CollectionVC {
     override func viewDidAppear(_ animated: Bool) {
         
         setTopViewController()
-        setupNavBarButtons(graySeven, atIndex: colourIndex)
+        setupNavBarButtons(grayTwo, atIndex: colourIndex)
         
         if collectionViewType == .days {
             removeMonthControlButtons()

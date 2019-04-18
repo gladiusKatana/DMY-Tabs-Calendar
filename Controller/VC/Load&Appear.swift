@@ -11,7 +11,7 @@ extension CollectionVC {
         collectionView.bounces = false
         setupNotificationForStatusBarHeightChange()
         setTopViewController()
-        print(substringWithAppends(input: navBarTitle, preceding: "\n💾view ", following:  " loaded"))
+        print("\n💾\(collectionViewType)-view loaded")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,7 @@ extension CollectionVC {
         if rePresentedVCFromButton {
             rePresentedVCFromButton = false
             reloadCV()                       
-            print(substringWithAppends(input: navBarTitle, preceding: "\n🏞view ", following:  " appeared"))
+            print("💾\(collectionViewType)-view appeared")
         } //above method called early (before actually appears) to print on first appearance + avoid an additional reset of rePresentedVCFromButton
     }
     

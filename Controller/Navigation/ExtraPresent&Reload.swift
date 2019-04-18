@@ -11,7 +11,7 @@ extension CollectionVC {
             || willPresentVCAgainBecauseAppJustEnteredForeground {
             
             rePresentedVCFromButton = false
-//            print(substringWithAppends(input: vc.navBarTitle, preceding: "\n----------------------presented then reloaded cv ", following:  ""))
+            print("\n----------------------presented then reloaded \(vc.collectionViewType) cv ")
             
             setupTitleAndPresentViewController(vc: vc) { () -> () in
                 previousOrientation = currentOrientation // * should probably factor out

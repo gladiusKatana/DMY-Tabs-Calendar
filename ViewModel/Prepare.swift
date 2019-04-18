@@ -6,7 +6,6 @@ import UIKit
 extension CCVFlowLayout {
     
     override func prepare() {
-        
         calculateSizes()
         cellWidth = cellWd;     widthPlusSpace = cellWidth! + hSpace
         cellHeight = cellHt;    heightPlusSpace = cellHeight! + vSpace
@@ -19,7 +18,8 @@ extension CCVFlowLayout {
         yOffSet = collectionView!.contentOffset.y + CGFloat(navBarHeight + statusBarHeight - statusBarDelta)    //print("yo: \(yOffSet)")
         xOffSet = collectionView!.contentOffset.x
         
-        checkOrientation()                          //print(substringWithAppends(input: currentTopVC.navBarTitle, preceding: "---------------------prepare cv  ", following:  "  cell width: \(cellWidth!)  nav bar height: \(navBarHeight)"))
+        checkOrientation()
+        print("---------------------prepare \(currentTopVC.collectionViewType)-cv")     //print("---------------------prepare \(currentTopVC.collectionViewType)-cv    \n                     cell width: \(cellWidth!)\n                     nav bar height: \(navBarHeight)")
         
         if previousOrientation != currentOrientation  {
             DispatchQueue.main.asyncAfter(deadline: .now()) {

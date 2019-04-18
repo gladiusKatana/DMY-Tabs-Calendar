@@ -19,7 +19,9 @@ extension CollectionVC {
 //            setupAndPresent(vc: vc)
 //            }
         
-        } else {print(substringWithAppends(input: vc.navBarTitle, preceding: "you're already looking at view controller ", following: "'s view"))}
+        } else {
+            print("you're already looking at the \(vc.collectionViewType)-view")//collectionViewType
+        }
     }
     
     func reloadWithDelay(after timeDelay: Double) {

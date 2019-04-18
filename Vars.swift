@@ -31,12 +31,12 @@ var yearsLayout = CCVFlowLayout(rows: 5, cols: 24, lockedHeaderRows: 0, lockedHe
                                  loadsHorizontally: true,
                                  squareCellMode: .noAutoSquare)
 
-var daysVC = CollectionVC(type: .days, headerTitle: ":)", colourIndex: 2, collectionViewLayout: daysLayout)         // header titles get...
-var monthsVC = CollectionVC(type: .months, headerTitle: ":)", colourIndex: 1, collectionViewLayout: monthsLayout)   //...changed promptly
-var yearsVC = CollectionVC(type: .years, headerTitle: ":)", colourIndex: 0, collectionViewLayout: yearsLayout)      //...so they don't matter here
+var daysVC = CollectionVC(type: .days, navBarTitle: ":)", colourIndex: 2, collectionViewLayout: daysLayout)         // header titles get...
+var monthsVC = CollectionVC(type: .months, navBarTitle: ":)", colourIndex: 1, collectionViewLayout: monthsLayout)   //...changed promptly
+var yearsVC = CollectionVC(type: .years, navBarTitle: ":)", colourIndex: 0, collectionViewLayout: yearsLayout)      //...so they don't matter here
 //--------------------------------------------------------------------------------------------
 
-var currentTopVC : CollectionVC = CollectionVC(type: .days, headerTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)
+var currentTopVC : CollectionVC = CollectionVC(type: .days, navBarTitle: "temporary value to satisfy init", colourIndex: 0, collectionViewLayout: daysLayout)
 var backgroundVC = UIViewController()
 
 var statusBar = UIView();           var navbarTitleLabel = UILabel();       var testRectanglelayer = CAShapeLayer()

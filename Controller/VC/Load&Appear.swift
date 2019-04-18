@@ -6,7 +6,6 @@ import UIKit
 extension CollectionVC {
     
     override func viewDidLoad() {
-        
         collectionView.backgroundColor = navyBlue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.reuseIdentifier)
         collectionView.bounces = false
@@ -15,20 +14,20 @@ extension CollectionVC {
         print(substringWithAppends(input: navBarTitle, preceding: "\n💾view ", following:  " loaded"))
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        
         if collectionViewType == .days {
             setupViewTitle("\(monthString) \(year)", numLines: 1, alignment: .left)
         }
-        else if collectionViewType == .months {
+        else {
             currentDate = Date()
             processCurrentDate()
-            setupViewTitle("\(year)", numLines: 1, alignment: .left)
-        }
-
-        else {
-//        print("yearly view controller appeared, it may not be set up yet/") // * will set up soon
+            
+            if collectionViewType == .months {
+                setupViewTitle("\(year)", numLines: 1, alignment: .left)
+            }
+            else {
+                setupViewTitle("21st Century", numLines: 1, alignment: .left)
+            }
         }
         
         if rePresentedVCFromButton {
@@ -38,9 +37,7 @@ extension CollectionVC {
         } //above method called early (before actually appears) to print on first appearance + avoid an additional reset of rePresentedVCFromButton
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
-        
         setTopViewController()
         setupNavBarButtons(grayTwo, atIndex: colourIndex)
         

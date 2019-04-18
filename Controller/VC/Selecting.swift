@@ -10,23 +10,23 @@ extension CollectionVC {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CustomCell
         
-        switch collectionViewType {
-            
-        case .days:
+        if collectionViewType == .days {
             
             print(formalDateString(cell.cellDate, comment: "selected day-cell date:"))
+        }
+        else {
             
-        case .months:
-            
-            print(formalDateString(cell.cellDate, comment: "selected month-cell date:"))
+            if collectionViewType == .months {
+                print(formalDateString(cell.cellDate, comment: "selected month-cell date:"))
+            }
+            else {
+                print(formalDateString(cell.cellDate, comment: "selected year-cell date:"))
+            }
             
             currentDate = cell.cellDate
             processCurrentDate()
             presentViaVCButton(vc: daysVC)
-            
-        default:
-            print(formalDateString(cell.cellDate, comment: "selected cell date:"))
         }
+        
     }
-    
 }

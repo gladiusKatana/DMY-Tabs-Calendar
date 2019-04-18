@@ -14,13 +14,12 @@ extension CollectionVC {
     
     
     func setupDailyCells (cell: CustomCell, column: Int, row: Int) {
-        
         let daysFromToday = 86400 * (column - todayCellColumn + 7 * (row - todayCellRow))
         cell.cellDate = currentDate + TimeInterval(daysFromToday)
         
         if row == 0 {cell.titleLabel.text = ["S", "M", "T", "W", "T", "F", "S"][column]}    // set cell text
         else {cell.titleLabel.text = "\(dayIntOf(cell.cellDate))"}
-
+        
         
         if monthNameOf(currentDate) == monthNameOf(Date())              // set cell colour based on whether month in view is present month
             && yearOf(currentDate) == yearOf(Date())
@@ -42,7 +41,6 @@ extension CollectionVC {
     
     
     func setupMonthlyCells (cell: CustomCell, column: Int, row: Int) {
-        
         let monthIndex = row * 3 + column
         
         if currentMonthIndex == row * 3 + column {
@@ -58,8 +56,13 @@ extension CollectionVC {
     
     
     func setupYearlyCells (cell: CustomCell, column: Int, row: Int) {
+        let yearlyCalendarStartingDate = 2015
+        cell.cellDate = createDate(yearlyCalendarStartingDate + column + 5 * row, monthInt: 1, dayInt: 1)
+        cell.titleLabel.text = "\(yearOf(cell.cellDate))";  cell.titleLabel.textColor = platinum
         
-        cell.titleLabel.text = ":)";     cell.titleLabel.textColor = platinum
+        if yearOf(cell.cellDate) == yearOf(Date()) {              // set cell colour based on whether month in view is present month
+            cell.backgroundColor = platinumLite
+        }
     }
 }
 

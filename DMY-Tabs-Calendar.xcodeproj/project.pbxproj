@@ -160,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				0669AA13225C49C500E2AE8E /* Dates.swift */,
-				06349AEE225ACE0000FBFE88 /* StringMethods.swift */,
 				06349AED225ACE0000FBFE88 /* CustomCell.swift */,
+				06349AEE225ACE0000FBFE88 /* StringMethods.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

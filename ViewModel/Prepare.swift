@@ -19,7 +19,7 @@ extension CCVFlowLayout {
         xOffSet = collectionView!.contentOffset.x
         
         checkOrientation()
-        print("---------------------prepare \(currentTopVC.collectionViewType)-cv")     //print("---------------------prepare \(currentTopVC.collectionViewType)-cv    \n                     cell width: \(cellWidth!)\n                     nav bar height: \(navBarHeight)")
+//        print("---------------------prepare \(currentTopVC.collectionViewType)-cv")     //print("---------------------prepare \(currentTopVC.collectionViewType)-cv    \n                     cell width: \(cellWidth!)\n                     nav bar height: \(navBarHeight)")
         
         if previousOrientation != currentOrientation  {
             DispatchQueue.main.asyncAfter(deadline: .now()) {

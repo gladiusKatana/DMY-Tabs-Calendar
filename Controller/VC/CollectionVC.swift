@@ -6,12 +6,11 @@ import UIKit
 class CollectionVC: UICollectionViewController {
     
     var downcastLayout : CCVFlowLayout?;    var collectionViewType = CollectionViewType.days
-    var navBarTitle: String = String("");   var colourIndex: Int = Int()
+    var colourIndex: Int = Int()
     
-    init(type collectionViewType: CollectionViewType, navBarTitle: String, colourIndex: Int, collectionViewLayout layout: UICollectionViewLayout) {
+    init(_ collectionViewType: CollectionViewType, colourIndex: Int, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
         self.collectionViewType = collectionViewType
-        self.navBarTitle = navBarTitle
         self.colourIndex = colourIndex
         self.downcastLayout = layout as? CCVFlowLayout
     }
